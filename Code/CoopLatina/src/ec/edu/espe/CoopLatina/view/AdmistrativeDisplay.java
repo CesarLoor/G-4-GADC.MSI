@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class AdmistrativeDisplay {
     public static void main(String[] args) {
-        System.out.println("==========Welcome to CoopLatina==========");
+        System.out.println("==========Welcome to Coop-Latina==========");
         
         
         ArrayList<Bus> buses;
