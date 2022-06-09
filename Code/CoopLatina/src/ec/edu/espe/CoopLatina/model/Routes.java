@@ -35,7 +35,9 @@ public class Routes {
     }
     
  
-    
+    public String toStringData() {
+        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", availableRoute=" + availableRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + '}';
+    }
 
    
     
