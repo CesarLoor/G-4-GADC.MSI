@@ -2,76 +2,151 @@
 package ec.edu.espe.CoopLatina.view;
 
 import ec.edu.espe.CoopLatina.model.Bus;
+import ec.edu.espe.CoopLatina.model.Customer;
+import ec.edu.espe.CoopLatina.model.Gas;
+import ec.edu.espe.CoopLatina.model.Passage;
+import ec.edu.espe.CoopLatina.model.Passenger;
 import ec.edu.espe.CoopLatina.model.Routes;
+import ec.edu.espe.CoopLatina.model.SquareParts;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+
 
 /**
  *
  * @author Loor Cesar, Molina Gustavo,DDCO-ESPE,GADC.MSI
  */
 public class AdmistrativeDisplay {
+<<<<<<< HEAD
     public static void main(String[] args) {
         System.out.println("==========Welcome to Coop-Latina==========");
+=======
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+>>>>>>> e128399f8cabff6f91b3d6a130613249403e6329
         
+        System.out.println("\t=========================");
+        System.out.println("\t==WELCOME TO COOPLATINA==");
+        System.out.println("\t=========================");
         
-        ArrayList<Bus> buses;
-        ArrayList<Routes> routes;
+        FileWriter fileWriter;
+        BufferedWriter BufferedWriter;
+        
+        int id;
         int op;
-        Scanner text;
+        int number;
+        String identificationCard;
         String name;
-        buses = new ArrayList<>();
-        routes = new ArrayList<>();
-        text= new Scanner(System.in);
+        String address;
+        String email;
+      
+        String pathCustomerCVS;
         
      
-        System.out.println("Routes Avalibles\n");
-                
-        routes.add(0, new Routes("Sur",23,false,15,0.75F));
-        routes.add(1, new Routes("Nort",35,false,20,1.25F));
-        routes.add(2, new Routes("Nort",15,true,8,0.35F));
-        for (Routes route : routes) {
-            System.out.println(routes);
-        }
+        pathCustomerCVS = "C:\\Users\\pc\\Desktop\\2do Semestre\\Poo\\codigo\\G-4-GADC.MSI\\customer.CVS";
         
-        System.out.println("\ntransport available\n");
-        buses.add(0, new Bus("A002","Luis",23,3.6F));   //placa,chofer,Nºbus,gananciaDiaria
-        buses.add(0, new Bus("A001", "Marco",35, 4.8F));
+        ArrayList<Routes>routes;
+        ArrayList<Bus>buses;
+        ArrayList<SquareParts>squareparts;
+        ArrayList<Customer>customers;
+        ArrayList<Gas>gas;
+        ArrayList<Passage>passage;
+        ArrayList<Passenger>passengers;
+        
       
-        for (Bus buse : buses) {
-            System.out.println(buses);
-        }
-
-   Scanner sn = new Scanner(System.in);
-        boolean salir = false;
-        int opcion; 
+        buses = new ArrayList<>();
+        routes = new ArrayList<>();
+        squareparts = new ArrayList<>();
+        customers = new ArrayList<>();
+        
+       Scanner textInput = new Scanner(System.in);
+       
+        
+        
+        //Buses disponibles
+//        buses.add( new Bus("A001", "Marco", 35, 0.35f));
+//        buses.add(new Bus("A003", "Jorde", 13, 0.4f));
+        
+        //Rutas disponibles
+//        routes.add(new Routes("Norte", 35, true, 15, 0.35f));
+//        routes.add(new Routes("Sur", 13, true, 25, 0.40f));
+     
+        
+            Scanner sn = new Scanner(System.in);
+            boolean exit = false;
+             
  
         
-        while (!salir) {
- 
-            System.out.println("1. Choose routes");
-            System.out.println("2. Pay for routes");
-            System.out.println("3. ??????");
-            System.out.println("4. Exit");
- 
+        while (!exit) {
+            printOption();
+           
             try {
  
                 System.out.println("choose one of de option");
-                opcion = sn.nextInt();
- 
-                switch (opcion) {
+                 op = textInput.nextInt();
+   
+                switch (op) {
                     case 1:
-                        System.out.println("you have chosen the option 1");
-                        break;
+                        File file = new File(pathCustomerCVS);
+                        if (!(file.exists())) {
+                          file.createNewFile();
+                          fileWriter = new FileWriter(pathCustomerCVS);
+                          fileWriter.append("ID;Name;Customer;Number;Adress\n");
+                          fileWriter.close();
+                        }else{
+                           fileWriter = new FileWriter(pathCustomerCVS,true);
+                        }
+                           BufferedWriter = new BufferedWriter(fileWriter);
+                           System.out.println(file.exists());
+                           
+                           System.out.println("You choose the option Nº1\n");
+                        System.out.println("\n\n======Type Data about  user======");
+                        
+                        System.out.println("Write your Identification");
+                        identificationCard= sn.next();
+                        System.out.println("Write the costumer name");
+                        textInput.nextLine();
+                        name = textInput.nextLine();
+                        System.out.println("Write the number of your phone");
+                        number = textInput.nextInt();
+                        System.out.println("Write the address");
+                        address = textInput.next();
+                        
+                       customers.add(new Customer(identificationCard, name, number, address));
+                       String str = customers.get(customers.size()-1).toString().replaceAll(",",";");
+                       
+                        System.out.println(str);
+                        BufferedWriter.append(str+"\n");
+                        BufferedWriter.close();
+                        
+                     break;  
+  
+    
                     case 2:
-                        System.out.println("you have chosen the option 2");
+                        System.out.println("\n\n======The available routes are======");
+                        routes.add(new Routes("Nort", 12, true, 35, 0.40f));
+                        routes.add(new Routes("Sur", 12, true, 20, 0.35f));
+                               
+                        System.out.println(routes);
+                
+                        System.out.println("\n");
                         break;
                     case 3:
-                        System.out.println("you have chosen the option 3");
+                        System.out.println("\n\n======The avalible bus are======");
+                        buses.add( new Bus("A001", "Marco", 35, 0.35f));
+                        buses.add(new Bus("A003", "Jorde", 13, 0.4f));
+                        
+                        System.out.println(buses);
                         break;
                     case 4:
-                        salir = true;
+                        exit = true;
                         break;
                     default:
                         System.out.println("just numbers between 1 and 4");
@@ -81,9 +156,21 @@ public class AdmistrativeDisplay {
                 sn.next();
             }
         }
- 
+
     }
+    
+
+    private static void printOption() {
+        System.out.println("Type 1 to introduce the user");
+        System.out.println("Type 2 to view available routes");
+        System.out.println("Type 3 Coming Soon");
+        System.out.println("Type 4 to exit");
+        System.out.println("Type 5 Coming Soon");
+         
     }
+ }
    
+            
+
 
 
