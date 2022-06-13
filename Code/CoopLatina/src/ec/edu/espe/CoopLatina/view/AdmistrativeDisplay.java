@@ -27,7 +27,7 @@ import java.util.Scanner;
 public class AdmistrativeDisplay {
 
     public static void main(String[] args) {
-        System.out.println("==========Welcome to Coop-Latina==========");
+        
 
         
         System.out.println("\t=========================");
@@ -48,7 +48,7 @@ public class AdmistrativeDisplay {
         String pathCustomerCVS;
         
      
-        pathCustomerCVS = "C:\\Users\\pc\\Desktop\\2do Semestre\\Poo\\codigo\\G-4-GADC.MSI\\customer.CVS";
+        pathCustomerCVS = "C:\\Users\\pc\\Desktop\\2do Semestre\\Poo\\codigo\\G-4-GADC.MSI\\customer.csv";
         
         ArrayList<Routes>routes;
         ArrayList<Bus>buses;
