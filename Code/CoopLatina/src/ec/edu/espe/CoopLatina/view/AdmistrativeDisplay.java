@@ -10,7 +10,6 @@ import ec.edu.espe.CoopLatina.model.Routes;
 import ec.edu.espe.CoopLatina.model.SquareParts;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,10 +24,8 @@ import java.util.Scanner;
  * @author Loor Cesar, Molina Gustavo,DDCO-ESPE,GADC.MSI
  */
 public class AdmistrativeDisplay {
-
-    public static void main(String[] args) {
-        
-
+    
+    public static void main(String[] args) throws IOException{
         
         System.out.println("\t=========================");
         System.out.println("\t==WELCOME TO COOPLATINA==");
@@ -47,12 +44,13 @@ public class AdmistrativeDisplay {
       
         String pathCustomerCVS;
         
-     
-        pathCustomerCVS = "C:\\Users\\pc\\Desktop\\2do Semestre\\Poo\\codigo\\G-4-GADC.MSI\\customer.csv";
+        //Al momento de ejecutar el codigo para guardar datos deben ubicar su carpeta para guardar .csv
+        pathCustomerCVS = "C:\\Users\\pc\\Desktop\\2do Semestre\\Poo\\codigo\\G-4-GADC.MSI\\costumer.csv";
+        
         
         ArrayList<Routes>routes;
         ArrayList<Bus>buses;
-        ArrayList<SquareParts>squareparts;
+        ArrayList<SquareParts>squarts;
         ArrayList<Customer>customers;
         ArrayList<Gas>gas;
         ArrayList<Passage>passage;
@@ -61,7 +59,7 @@ public class AdmistrativeDisplay {
       
         buses = new ArrayList<>();
         routes = new ArrayList<>();
-        squareparts = new ArrayList<>();
+      //  squareparts = new ArrayList<>();
         customers = new ArrayList<>();
         
        Scanner textInput = new Scanner(System.in);
@@ -69,12 +67,13 @@ public class AdmistrativeDisplay {
         
         
         //Buses disponibles
-//        buses.add( new Bus("A001", "Marco", 35, 0.35f));
-//        buses.add(new Bus("A003", "Jorde", 13, 0.4f));
+        buses.add( new Bus("A001", "Marco", 35, 0.35f));
+        buses.add(new Bus("A003", "Jorde", 13, 0.4f));
         
         //Rutas disponibles
-//        routes.add(new Routes("Norte", 35, true, 15, 0.35f));
-//        routes.add(new Routes("Sur", 13, true, 25, 0.40f));
+        routes.add(new Routes("Norte", 35, true, 15, 0.35f));
+        routes.add(new Routes("Sur", 13, true, 25, 0.40f));
+        
      
         
             Scanner sn = new Scanner(System.in);
@@ -129,21 +128,18 @@ public class AdmistrativeDisplay {
     
                     case 2:
                         System.out.println("\n\n======The available routes are======");
-                        routes.add(new Routes("Nort", 12, true, 35, 0.40f));
-                        routes.add(new Routes("Sur", 12, true, 20, 0.35f));
-                               
+
                         System.out.println(routes);
-                
-                        System.out.println("\n");
                         break;
+                        
                     case 3:
                         System.out.println("\n\n======The avalible bus are======");
-                        buses.add( new Bus("A001", "Marco", 35, 0.35f));
-                        buses.add(new Bus("A003", "Jorde", 13, 0.4f));
-                        
                         System.out.println(buses);
                         break;
-                    case 4:
+                    case 4: 
+                        
+                        
+                    case 5:
                         exit = true;
                         break;
                     default:
@@ -161,9 +157,9 @@ public class AdmistrativeDisplay {
     private static void printOption() {
         System.out.println("Type 1 to introduce the user");
         System.out.println("Type 2 to view available routes");
-        System.out.println("Type 3 Coming Soon");
-        System.out.println("Type 4 to exit");
-        System.out.println("Type 5 Coming Soon");
+        System.out.println("Type 3 to view the bus available");
+        System.out.println("Type 4 Cooming Soom");
+        System.out.println("Type 5 to exit");
          
     }
  }
