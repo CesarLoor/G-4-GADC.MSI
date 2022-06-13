@@ -25,12 +25,10 @@ import java.util.Scanner;
  * @author Loor Cesar, Molina Gustavo,DDCO-ESPE,GADC.MSI
  */
 public class AdmistrativeDisplay {
-<<<<<<< HEAD
+
     public static void main(String[] args) {
         System.out.println("==========Welcome to Coop-Latina==========");
-=======
-    public static void main(String[] args) throws FileNotFoundException, IOException {
->>>>>>> e128399f8cabff6f91b3d6a130613249403e6329
+
         
         System.out.println("\t=========================");
         System.out.println("\t==WELCOME TO COOPLATINA==");
