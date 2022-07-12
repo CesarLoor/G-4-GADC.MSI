@@ -12,9 +12,18 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/aldma/Documents/G-4-GADC.MSI/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/view/FrmCoopLatina.java</file>
             <file>file:/C:/Users/aldma/Documents/G-4-GADC.MSI/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/view/FrmLogin.java</file>
             <file>file:/C:/Users/aldma/Documents/G-4-GADC.MSI/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/view/FrmPassenger.java</file>
+=======
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/model/Routes.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/view/AdministreDisplay.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/model/Passage.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/model/Customer.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/model/Bus.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatina/src/espe/edu/ec/CoopLatina/model/Passenger.java</file>
+>>>>>>> 0b0fbc36d023a72a9ccefb24f92ff2b22c0c6d2b
         </group>
     </open-files>
 </project-private>

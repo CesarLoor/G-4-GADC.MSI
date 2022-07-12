@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Loor Cesar,DDCO-ESPE,GADC.MSI
+ * @author Loor Cesar David Montufar,DDCO-ESPE,GADC.MSI
  */
 public class AdministreDisplay {
 
