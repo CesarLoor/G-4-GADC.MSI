@@ -1,45 +1,32 @@
 
-package ec.edu.espe.CoopLatina.model;
+package espe.edu.ec.CoopLatina.model;
 
 /**
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
 public class Routes {
-    
-    
-    
     private String nameRoute;
     private int idRoute;
-    private boolean availableRoute;
     private int distanceKm;
     private float priceOfRoute;
+    private boolean avalibleRoute;
 
-    
-    
-    
-    
-    
-    
-    public Routes(String nameRoute, int idRoute, boolean availableRoute, int distanceKm, float priceOfRoute) {
+    public Routes(String nameRoute, int idRoute, int distanceKm, float priceOfRoute, boolean avalibleRoute) {
         this.nameRoute = nameRoute;
         this.idRoute = idRoute;
-        this.availableRoute = availableRoute;
         this.distanceKm = distanceKm;
         this.priceOfRoute = priceOfRoute;
+        this.avalibleRoute = avalibleRoute;
     }
 
     @Override
     public String toString() {
-        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", availableRoute=" + availableRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + '}';
-    }
-    
- 
-    public String toStringData() {
-        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", availableRoute=" + availableRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + '}';
+        return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + ", avalibleRoute=" + avalibleRoute + '}';
     }
 
-   
+    
+    
     
     
     
@@ -72,20 +59,6 @@ public class Routes {
     }
 
     /**
-     * @return the availableRoute
-     */
-    public boolean isAvailableRoute() {
-        return availableRoute;
-    }
-
-    /**
-     * @param availableRoute the availableRoute to set
-     */
-    public void setAvailableRoute(boolean availableRoute) {
-        this.availableRoute = availableRoute;
-    }
-
-    /**
      * @return the distanceKm
      */
     public int getDistanceKm() {
@@ -112,6 +85,22 @@ public class Routes {
     public void setPriceOfRoute(float priceOfRoute) {
         this.priceOfRoute = priceOfRoute;
     }
+
+    /**
+     * @return the avalibleRoute
+     */
+    public boolean isAvalibleRoute() {
+        return avalibleRoute;
+    }
+
+    /**
+     * @param avalibleRoute the avalibleRoute to set
+     */
+    public void setAvalibleRoute(boolean avalibleRoute) {
+        this.avalibleRoute = avalibleRoute;
+    }
+
+   
     
     
     

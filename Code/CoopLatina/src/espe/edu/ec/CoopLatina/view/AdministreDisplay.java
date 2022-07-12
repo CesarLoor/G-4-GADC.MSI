@@ -1,33 +1,28 @@
- 
-package ec.edu.espe.CoopLatina.view;
 
-import ec.edu.espe.CoopLatina.model.Bus;
-import ec.edu.espe.CoopLatina.model.Customer;
-import ec.edu.espe.CoopLatina.model.Gas;
-import ec.edu.espe.CoopLatina.model.Passage;
-import ec.edu.espe.CoopLatina.model.Passenger;
-import ec.edu.espe.CoopLatina.model.Routes;
-import ec.edu.espe.CoopLatina.model.SquareParts;
+package espe.edu.ec.CoopLatina.view;
+
+import espe.edu.ec.CoopLatina.model.Bus;
+import espe.edu.ec.CoopLatina.model.Customer;
+import espe.edu.ec.CoopLatina.model.Passage;
+import espe.edu.ec.CoopLatina.model.Passenger;
+import espe.edu.ec.CoopLatina.model.Routes;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-
 /**
  *
- * @author Loor Cesar, Molina Gustavo,DDCO-ESPE,GADC.MSI
+ * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
-public class AdmistrativeDisplay {
+public class AdministreDisplay {
+
     
-    public static void main(String[] args) throws IOException{
-        
-        System.out.println("\t=========================");
+    public static void main(String[] args) throws IOException {
+       System.out.println("\t=========================");
         System.out.println("\t==WELCOME TO COOPLATINA==");
         System.out.println("\t=========================");
         
@@ -50,29 +45,30 @@ public class AdmistrativeDisplay {
         
         ArrayList<Routes>routes;
         ArrayList<Bus>buses;
-        ArrayList<SquareParts>squarts;
         ArrayList<Customer>customers;
-        ArrayList<Gas>gas;
         ArrayList<Passage>passage;
         ArrayList<Passenger>passengers;
         
-      
+        
+        
+        
         buses = new ArrayList<>();
         routes = new ArrayList<>();
-      //  squareparts = new ArrayList<>();
         customers = new ArrayList<>();
+     
+
         
-       Scanner textInput = new Scanner(System.in);
+        Scanner textInput = new Scanner(System.in);
        
         
         
         //Buses disponibles
-        buses.add( new Bus("A001", "Marco", 35, 0.35f));
-        buses.add(new Bus("A003", "Jorde", 13, 0.4f));
+        buses.add( new Bus("A001", "Marco", 35));
+        buses.add(new Bus("A003", "Jorge", 13));
         
         //Rutas disponibles
-        routes.add(new Routes("Norte", 35, true, 15, 0.35f));
-        routes.add(new Routes("Sur", 13, true, 25, 0.40f));
+        routes.add(new Routes("Quito", 01, 25, 2.5f, true));
+        routes.add(new Routes("Valle", 02, 10, 1.5f, true));
         
      
         
@@ -95,7 +91,7 @@ public class AdmistrativeDisplay {
                         if (!(file.exists())) {
                           file.createNewFile();
                           fileWriter = new FileWriter(pathCustomerCVS);
-                          fileWriter.append("ID;Name;Customer;Number;Adress\n");
+                          fileWriter.append("Name;Identication;password;Number;\n");
                           fileWriter.close();
                         }else{
                            fileWriter = new FileWriter(pathCustomerCVS,true);
@@ -103,26 +99,30 @@ public class AdmistrativeDisplay {
                            BufferedWriter = new BufferedWriter(fileWriter);
                            System.out.println(file.exists());
                            
-                           System.out.println("You choose the option Nº1\n");
+                        System.out.println("You choose the option Nº1\n");
                         System.out.println("\n\n======Type Data about  user======");
                         
-                        System.out.println("Write your Identification");
-                        identificationCard= sn.next();
-                        System.out.println("Write the costumer name");
-                        textInput.nextLine();
+                        System.out.println("Write Name");
                         name = textInput.nextLine();
+                        textInput.nextLine();
+                        
+                        System.out.println("Write Password");
+                        identificationCard= sn.next();
+                        name = textInput.nextLine();
+                        textInput.nextLine();
+                        
                         System.out.println("Write the number of your phone");
                         number = textInput.nextInt();
+                        
                         System.out.println("Write the address");
                         address = textInput.next();
                         
-                       customers.add(new Customer(identificationCard, name, number, address));
-                       String str = customers.get(customers.size()-1).toString().replaceAll(",",";");
+                        customers.add(new Customer(name, identificationCard, address, number));
+                        String str = customers.get(customers.size()-1).toString().replaceAll(",",";");
                        
                         System.out.println(str);
                         BufferedWriter.append(str+"\n");
                         BufferedWriter.close();
-                        
                      break;  
   
     
@@ -161,10 +161,6 @@ public class AdmistrativeDisplay {
         System.out.println("Type 4 Cooming Soom");
         System.out.println("Type 5 to exit");
          
-    }
- }
-   
-            
-
-
-
+    }  
+    
+}
