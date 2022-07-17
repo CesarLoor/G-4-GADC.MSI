@@ -1,0 +1,5 @@
+ID;Name;Customer;Number;Adress
+customer{0988478554; Cesar; 850599440; ciloor2}
+Customer{name=; identificationCard=0850599440; Password=ciloor2.espe.edu.ec; number=988478554}
+Customer{name=; identificationCard=Vecinita; Password=Mongolia; number=988478554}
+Customer{name=; identificationCard=1758831065; Password=tupapi; number=988478554}
