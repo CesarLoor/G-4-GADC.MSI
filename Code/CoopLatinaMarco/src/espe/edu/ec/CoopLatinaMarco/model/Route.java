@@ -5,19 +5,23 @@ package espe.edu.ec.CoopLatinaMarco.model;
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
-public class Routes {
+public class Route {
     private String nameRoute;
     private int idRoute;
     private int distanceKm;
     private float priceOfRoute;
     private boolean avalibleRoute;
 
-    public Routes(String nameRoute, int idRoute, int distanceKm, float priceOfRoute, boolean avalibleRoute) {
+    public Route(String nameRoute, int idRoute, int distanceKm, float priceOfRoute, boolean avalibleRoute) {
         this.nameRoute = nameRoute;
         this.idRoute = idRoute;
         this.distanceKm = distanceKm;
         this.priceOfRoute = priceOfRoute;
         this.avalibleRoute = avalibleRoute;
+    }
+
+    public Route(String marianas, String string, String km, float f) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
