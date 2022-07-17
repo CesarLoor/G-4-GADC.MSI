@@ -2,17 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Bus.java</file>
-            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmLogin.java</file>
-            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
-            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTicket.java</file>
-            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmBus.java</file>
-            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmCoopLatina.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Route.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmCoopLatina.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteRegister.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
         </group>
->>>>>>> 4904100de70333b01d3115afc9ca57be2d26813a
     </open-files>
 </project-private>
