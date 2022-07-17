@@ -13,7 +13,7 @@ public class Passenger  extends BasicModel{
     private String name;
     private String email;
     
-   
+  
     
         public Document buildDocument() {
         Document document = new Document();
@@ -37,7 +37,7 @@ public class Passenger  extends BasicModel{
         
     }
     
-   
+   //Aqui estuve
 
     /**
      * @return the id
