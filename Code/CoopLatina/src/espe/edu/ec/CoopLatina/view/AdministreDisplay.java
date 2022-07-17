@@ -18,11 +18,19 @@ import java.util.Scanner;
  *
  * @author Loor Cesar David Montufar,DDCO-ESPE,GADC.MSI
  */
+<<<<<<< HEAD:Code/CoopLatina/src/ec/edu/espe/CoopLatina/view/AdmistrativeDisplay.java
+public class AdmistrativeDisplay {
+
+    public static void main(String[] args) throws IOException {
+        System.out.println("==========Welcome to Coop-Latina==========");
+        System.out.println("\t=========================");
+=======
 public class AdministreDisplay {
 
     
     public static void main(String[] args) throws IOException {
        System.out.println("\t=========================");
+>>>>>>> d81d571f077fbe40e5bcce4af73f2e3e1ad9d4df:Code/CoopLatina/src/espe/edu/ec/CoopLatina/view/AdministreDisplay.java
         System.out.println("\t==WELCOME TO COOPLATINA==");
         System.out.println("\t=========================");
         
