@@ -1,5 +1,9 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
+import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
+import espe.edu.ec.CoopLatinaMarco.model.Route;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Molina Gustavo, DCCO-ESPE GADC.msi
@@ -31,15 +35,15 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtNameRoute = new javax.swing.JTextField();
         txtIdRoute = new javax.swing.JTextField();
-        txtDistance = new javax.swing.JTextField();
+        txtDistanceKm = new javax.swing.JTextField();
         txtPriceOfRoute = new javax.swing.JTextField();
         txtAvaibleRoute = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnReturnToMainMenu = new javax.swing.JButton();
+        btnSearch = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,7 +53,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         jLabel3.setText("ID Route");
 
-        jLabel4.setText("Distance in KM");
+        jLabel4.setText("Distance KM");
 
         jLabel5.setText("Price of Route");
 
@@ -77,11 +81,11 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                             .addComponent(jLabel6))
                         .addGap(68, 68, 68)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNameRoute)
+                            .addComponent(txtNameRoute, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                             .addComponent(txtIdRoute)
-                            .addComponent(txtDistance)
+                            .addComponent(txtDistanceKm)
                             .addComponent(txtPriceOfRoute)
-                            .addComponent(txtAvaibleRoute, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)))
+                            .addComponent(txtAvaibleRoute)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(141, 141, 141)
                         .addComponent(jLabel1)))
@@ -103,32 +107,37 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(txtDistance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDistanceKm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(txtPriceOfRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(txtAvaibleRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jButton1.setText("Add");
-
-        jButton2.setText("Return to main menu");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Search");
+        btnReturnToMainMenu.setText("Return to main menu");
+        btnReturnToMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnToMainMenuActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Save");
+        btnSearch.setText("Search");
 
-        jButton5.setText("Update");
+        btnSave.setText("Save");
+
+        btnUpdate.setText("Update");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -136,18 +145,18 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(btnAdd)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(btnSearch)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4))
+                        .addComponent(btnSave))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jButton2)))
+                        .addComponent(btnReturnToMainMenu)))
                 .addGap(22, 22, 22)
-                .addComponent(jButton5)
+                .addComponent(btnUpdate)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -155,12 +164,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(btnAdd)
+                    .addComponent(btnSearch)
+                    .addComponent(btnSave)
+                    .addComponent(btnUpdate))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(btnReturnToMainMenu)
                 .addContainerGap())
         );
 
@@ -192,12 +201,30 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPriceOfRouteActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnReturnToMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnToMainMenuActionPerformed
         FrmCoopLatina frmCoopLatina;
         frmCoopLatina = new FrmCoopLatina();
         frmCoopLatina.setVisible(true);
         this.setVisible(false);   
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnReturnToMainMenuActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        Route route;
+        RoutesController saveRoutes;
+
+        route = new Route();
+        saveRoutes = new RoutesController();
+       
+
+        route.setNameRoute(txtNameRoute.getText());
+        route.setIdRoute(JTValidation(txtIdRoute.getText()));
+        route.setDistanceKm(JTValidation(txtDistanceKm.getText()));
+        route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
+        //route.setAvalibleRoute(txtAvaibleRoute.getText());
+        
+        saveRoutes.CreateRoute(route);
+        JOptionPane.showMessageDialog(null, "Route add succesfull");
+    }//GEN-LAST:event_btnAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,11 +263,11 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnReturnToMainMenu;
+    private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -250,9 +277,31 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtAvaibleRoute;
-    private javax.swing.JTextField txtDistance;
+    private javax.swing.JTextField txtDistanceKm;
     private javax.swing.JTextField txtIdRoute;
     private javax.swing.JTextField txtNameRoute;
     private javax.swing.JTextField txtPriceOfRoute;
     // End of variables declaration//GEN-END:variables
+
+    public int JTValidation(String Age) {
+    
+        InputNumbersValidation input;
+        input= new InputNumbersValidation();
+        int validateInput = 0;
+        
+        boolean inputJT;
+        inputJT= input.ValidationNumbers(Age);
+       
+        if(inputJT!=false){
+            
+            validateInput= Integer.parseInt(Age);
+                    
+        }else{
+            JOptionPane.showMessageDialog(null, "La ruta o distancia debe ser un numero");
+        }
+        return validateInput;
+        
+        
+        
+    }
 }
