@@ -78,6 +78,11 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         jLabel6.setText("Avaible Route");
 
+        txtNameRoute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameRouteActionPerformed(evt);
+            }
+        });
         txtNameRoute.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtNameRouteKeyPressed(evt);
@@ -391,6 +396,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         frmRoutes.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnTableActionPerformed
+
+    private void txtNameRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameRouteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameRouteActionPerformed
 
     /**
      * @param args the command line arguments
