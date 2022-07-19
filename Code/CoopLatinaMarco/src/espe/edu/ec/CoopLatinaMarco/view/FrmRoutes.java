@@ -1,6 +1,8 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
 import espe.edu.ec.CoopLatinaMarco.model.Route;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 
 /**
@@ -14,8 +16,19 @@ public class FrmRoutes extends javax.swing.JFrame {
      */
     public FrmRoutes() {
         initComponents();
+        setTitle("Routes");
+        setIconImage(getIconImage());        
         populateRoutesTable();
+        setDefaultCloseOperation(0);
+        
+    
     }
+    @Override
+        public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
+        return retValue;
+    }
+    
     
     public void populateRoutesTable(){
     ArrayList<Route> routes;
