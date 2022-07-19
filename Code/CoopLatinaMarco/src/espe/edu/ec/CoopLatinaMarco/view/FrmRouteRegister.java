@@ -15,6 +15,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
      */
     public FrmRouteRegister() {
         initComponents();
+        lblIdError.setVisible(false);
+        lblNameError.setVisible(false);
+        lblDistanceError.setVisible(false);
+        lblPriceError.setVisible(false);
     }
 
     /**
@@ -38,11 +42,15 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         txtDistanceKm = new javax.swing.JTextField();
         txtPriceOfRoute = new javax.swing.JTextField();
         txtAvaibleRoute = new javax.swing.JTextField();
+        lblNameError = new javax.swing.JLabel();
+        lblIdError = new javax.swing.JLabel();
+        lblDistanceError = new javax.swing.JLabel();
+        lblPriceError = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnAdd = new javax.swing.JButton();
         btnReturnToMainMenu = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,11 +67,56 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         jLabel6.setText("Avaible Route");
 
+        txtNameRoute.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNameRouteKeyPressed(evt);
+            }
+        });
+
+        txtIdRoute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdRouteActionPerformed(evt);
+            }
+        });
+        txtIdRoute.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtIdRouteKeyPressed(evt);
+            }
+        });
+
+        txtDistanceKm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtDistanceKmKeyPressed(evt);
+            }
+        });
+
         txtPriceOfRoute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPriceOfRouteActionPerformed(evt);
             }
         });
+        txtPriceOfRoute.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPriceOfRouteKeyPressed(evt);
+            }
+        });
+
+        lblNameError.setForeground(new java.awt.Color(204, 0, 0));
+        lblNameError.setText("Name not valid!!");
+
+        lblIdError.setForeground(new java.awt.Color(204, 0, 0));
+        lblIdError.setText("Pls only digits");
+        lblIdError.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lblIdErrorKeyPressed(evt);
+            }
+        });
+
+        lblDistanceError.setForeground(new java.awt.Color(204, 0, 0));
+        lblDistanceError.setText("Pls only digits");
+
+        lblPriceError.setForeground(new java.awt.Color(204, 0, 0));
+        lblPriceError.setText("Pls only digits");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,7 +138,13 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                             .addComponent(txtIdRoute)
                             .addComponent(txtDistanceKm)
                             .addComponent(txtPriceOfRoute)
-                            .addComponent(txtAvaibleRoute)))
+                            .addComponent(txtAvaibleRoute))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNameError)
+                            .addComponent(lblIdError)
+                            .addComponent(lblDistanceError)
+                            .addComponent(lblPriceError)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(141, 141, 141)
                         .addComponent(jLabel1)))
@@ -99,19 +158,27 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(txtNameRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtNameRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblNameError)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(txtIdRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtIdRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblIdError)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(txtDistanceKm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtDistanceKm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblDistanceError)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(txtPriceOfRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtPriceOfRoute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblPriceError)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -135,7 +202,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         btnSearch.setText("Search");
 
-        btnSave.setText("Save");
+        btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setText("Update");
 
@@ -151,22 +223,22 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnSearch)
                         .addGap(18, 18, 18)
-                        .addComponent(btnSave))
+                        .addComponent(btnUpdate)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDelete))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(btnReturnToMainMenu)))
-                .addGap(22, 22, 22)
-                .addComponent(btnUpdate)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(btnSearch)
-                    .addComponent(btnSave)
+                    .addComponent(btnDelete)
                     .addComponent(btnUpdate))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnReturnToMainMenu)
@@ -181,17 +253,17 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -225,6 +297,73 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         saveRoutes.CreateRoute(route);
         JOptionPane.showMessageDialog(null, "Route add succesfull");
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void lblIdErrorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblIdErrorKeyPressed
+        
+    }//GEN-LAST:event_lblIdErrorKeyPressed
+
+    private void txtIdRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdRouteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdRouteActionPerformed
+
+    private void txtIdRouteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdRouteKeyPressed
+        String value = txtIdRoute.getText();
+        int length = value.length();
+        if(evt.getKeyChar()>='0' && evt.getKeyChar() <='9'){
+            txtIdRoute.setEditable(true);
+            lblIdError.setText("");
+            if(length>=10){
+            txtIdRoute.setEditable(false);
+            lblIdError.setText("Max 9 digits");
+            }
+        }else{
+            lblIdError.setVisible(true);
+        }
+    }//GEN-LAST:event_txtIdRouteKeyPressed
+
+    private void txtDistanceKmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDistanceKmKeyPressed
+        String value = txtDistanceKm.getText();
+        int length = value.length();
+        if(evt.getKeyChar()>='0' && evt.getKeyChar() <='9'){
+            txtDistanceKm.setEditable(true);
+            lblDistanceError.setText("");
+            if(length>=10){
+            txtDistanceKm.setEditable(false);
+            lblDistanceError.setText("Max 9 digits");
+            }
+        }else{
+            lblDistanceError.setVisible(true);
+        }
+    }//GEN-LAST:event_txtDistanceKmKeyPressed
+
+    private void txtPriceOfRouteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPriceOfRouteKeyPressed
+        String value = txtPriceOfRoute.getText();
+        int length = value.length();
+        if(evt.getKeyChar()>='0' && evt.getKeyChar() <='9'){
+            txtPriceOfRoute.setEditable(true);
+            lblPriceError.setText("");
+            if(length>=10){
+            txtPriceOfRoute.setEditable(false);
+            lblPriceError.setText("Max 9 digits");
+            }
+        }else{
+            lblPriceError.setVisible(true);
+        }
+    }//GEN-LAST:event_txtPriceOfRouteKeyPressed
+
+    private void txtNameRouteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameRouteKeyPressed
+        String name = String.valueOf(evt.getKeyChar());
+        if(!name.matches("[0-9]")){
+            evt.consume();
+            lblNameError.setVisible(false);
+        }else{
+            lblNameError.setVisible(true);
+        }
+    }//GEN-LAST:event_txtNameRouteKeyPressed
 
     /**
      * @param args the command line arguments
@@ -264,8 +403,8 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnReturnToMainMenu;
-    private javax.swing.JButton btnSave;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
@@ -276,6 +415,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblDistanceError;
+    private javax.swing.JLabel lblIdError;
+    private javax.swing.JLabel lblNameError;
+    private javax.swing.JLabel lblPriceError;
     private javax.swing.JTextField txtAvaibleRoute;
     private javax.swing.JTextField txtDistanceKm;
     private javax.swing.JTextField txtIdRoute;
