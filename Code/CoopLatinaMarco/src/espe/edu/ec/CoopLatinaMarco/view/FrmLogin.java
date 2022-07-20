@@ -18,7 +18,7 @@ public class FrmLogin extends javax.swing.JFrame {
      */
     public FrmLogin() {
         initComponents();
-        
+        setTitle("Login");
         setIconImage(getIconImage());
         
     }
