@@ -43,6 +43,22 @@ public class FrmRoutes extends javax.swing.JFrame {
     routes.add(route);
     route = new Route("Marianas",9812,352, 23.2F, true);
     routes.add(route);
+    route = new Route("CochaPamba",89812,612, 81.54F, true);
+    routes.add(route);
+    route = new Route("Zámbiza",90212,312, 86.12F, false);
+    routes.add(route); 
+    route = new Route("La Carolina",13923,592, 47.7F, true);
+    routes.add(route);
+    route = new Route("El Inca",98231,784, 43.1F, true);
+    routes.add(route);
+    route = new Route("Rumiñahui",90892,135, 03.4F, true);
+    routes.add(route);
+    route = new Route("Comite del pueblo",89271,432, 53.9F, false);
+    routes.add(route); 
+    route = new Route("Llano grande",34122,829, 71.5F, false);
+    routes.add(route);
+    route = new Route("Llano chico",76412,981, 53.1F, false);
+    routes.add(route);
     
     Object[][] objects = new Object[routes.size()][5];
     
@@ -76,6 +92,7 @@ public class FrmRoutes extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRouteTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -83,6 +100,7 @@ public class FrmRoutes extends javax.swing.JFrame {
 
         jLabel1.setText("ROUTES");
 
+        tblRouteTable.setBackground(new java.awt.Color(204, 204, 255));
         tblRouteTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null}
@@ -100,6 +118,13 @@ public class FrmRoutes extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Return to route register");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -110,7 +135,9 @@ public class FrmRoutes extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -122,7 +149,9 @@ public class FrmRoutes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -151,6 +180,13 @@ public class FrmRoutes extends javax.swing.JFrame {
         frmCoopLatina.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FrmRouteRegister frmRouteRegister;
+        frmRouteRegister = new FrmRouteRegister();
+        frmRouteRegister.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,6 +228,7 @@ public class FrmRoutes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
