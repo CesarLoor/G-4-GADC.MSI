@@ -37,6 +37,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -61,6 +62,14 @@ public class FrmCoopLatina extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem1);
+
+        jMenuItem6.setText("Register Bus");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem6);
 
         jMenuItem5.setText("Bus");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -181,6 +190,12 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_mnuRoutesRegisterActionPerformed
 
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        FrmBusRegister view = new FrmBusRegister();
+        view.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -229,6 +244,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem mnuRoutesRegister;
     private javax.swing.JMenuItem mnuRoutesTable;
     // End of variables declaration//GEN-END:variables

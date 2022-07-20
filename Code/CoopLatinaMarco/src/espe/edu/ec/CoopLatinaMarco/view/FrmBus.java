@@ -2,8 +2,7 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
 import espe.edu.ec.CoopLatinaMarco.model.Bus;
-import java.awt.Image;
-import java.awt.Toolkit;
+
 import java.util.ArrayList;
 
 
@@ -13,7 +12,7 @@ import java.util.ArrayList;
  */
 public final class FrmBus extends javax.swing.JFrame {
 
-      
+        
    /**
      * Creates new form FrmBus
      */
@@ -21,17 +20,44 @@ public final class FrmBus extends javax.swing.JFrame {
         initComponents();
         setIconImage(getIconImage());
         setDefaultCloseOperation(0);
+        setTitle("Buses");
+        setIconImage(getIconImage());        
+        populateBusTable();
         
     }
-    
-    
         
-        @Override
-            public Image getIconImage(){
-            Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
-            return retValue;
-            }
+                   
+        public void populateBusTable(){
+        ArrayList<Bus> buses;
+        buses = new ArrayList<>();
+        Bus bus;
+    
+        bus = new Bus(90892,"PDC-9855", "Marco Peralta", 1);
+        buses.add(bus);
+        bus = new Bus(93782,"CDF-955", "Karim Cadena", 2);
+        buses.add(bus); 
+        bus = new Bus(98719,"EDF-4658", "Mateo Gallardo", 3);
+        buses.add(bus);
+        bus = new Bus(9812,"PFE-201", "Gerardo Chicaiza", 4);
+        buses.add(bus);
+    
+        Object[][] objects = new Object[buses.size()][4];
+    
+        for (int i = 0; i < buses.size(); i++) {
+            objects[i][0] = buses.get(i).getId();
+            objects[i][1]= buses.get(i).getMatricule();
+            objects[i][2] = buses.get(i).getNameOfDriver();
+            objects[i][3] = buses.get(i).getRoute();
+            
 
+            tblBusTable.setModel(new javax.swing.table.DefaultTableModel(
+                    objects,
+                    new String[]{
+                        "Id", "Matricule", "NameOfDriver", "Route"
+                    }
+            ));
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,7 +81,7 @@ public final class FrmBus extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "id", "matricule", "nameOfDrive", "route"
+                "Id", "Matricule", "NameOfDrive", "Route"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -138,6 +164,10 @@ public final class FrmBus extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+    private javax.swing.JTable tblBusTable;
+    
+
+    
 
     
        

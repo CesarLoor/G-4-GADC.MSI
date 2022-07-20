@@ -425,10 +425,13 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameRouteActionPerformed
 
+<<<<<<< HEAD
     private void txtDistanceKmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDistanceKmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDistanceKmActionPerformed
 
+=======
+>>>>>>> 0c31ee862e5755bf998503154b6e5f4c4dce32a0
     /**
      * @param args the command line arguments
      */
