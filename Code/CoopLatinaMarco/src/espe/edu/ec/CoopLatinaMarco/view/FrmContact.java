@@ -41,10 +41,13 @@ public class FrmContact extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+
         jLabel1.setText("Please contact us through this email ");
 
         jLabel2.setText("cooplatina2022@gmail.com");
 
+        jButton1.setBackground(new java.awt.Color(204, 255, 204));
         jButton1.setText("Return to main menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
