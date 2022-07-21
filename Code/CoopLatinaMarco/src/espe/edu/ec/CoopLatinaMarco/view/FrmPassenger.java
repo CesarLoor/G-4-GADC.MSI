@@ -23,13 +23,6 @@ public class FrmPassenger extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         initComponents();
-        initComponents();
-        setTitle("Passengers");
-        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        setIconImage(getIconImage());
-        setDefaultCloseOperation(0);
-
 
     }
     
