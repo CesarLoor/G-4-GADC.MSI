@@ -40,6 +40,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
@@ -89,6 +90,14 @@ public class FrmCoopLatina extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jMenuItem2);
+
+        jMenuItem6.setText("List of Passenger");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem6);
 
         jMenuBar1.add(jMenu4);
 
@@ -157,7 +166,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        FrmPassenger view = new FrmPassenger();
+        FrmPassengerRegister view = new FrmPassengerRegister();
         view.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -195,7 +204,11 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuRoutesRegisterActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+<<<<<<< HEAD
+        FrmPassenger view = new FrmPassenger();
+=======
         FrmBusRegister view = new FrmBusRegister();
+>>>>>>> b2bc23ae1b610d1826516d200b0e3828ff38d453
         view.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem6ActionPerformed
