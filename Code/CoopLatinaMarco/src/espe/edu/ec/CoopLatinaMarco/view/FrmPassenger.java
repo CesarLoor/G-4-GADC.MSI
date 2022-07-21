@@ -17,21 +17,12 @@ public class FrmPassenger extends javax.swing.JFrame {
      * Creates new form Passenger
      */
     public FrmPassenger() {
-<<<<<<< HEAD
+
         setIconImage(getIconImage());
         setTitle("CoopLatina");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         initComponents();
-=======
-        initComponents();
-        setTitle("Passengers");
-        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        setIconImage(getIconImage());
-        setDefaultCloseOperation(0);
-
->>>>>>> b2bc23ae1b610d1826516d200b0e3828ff38d453
     }
     
      @Override
