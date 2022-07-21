@@ -204,23 +204,12 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuRoutesRegisterActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-<<<<<<< HEAD
-        
-=======
-
-
-        FrmPassenger view = new FrmPassenger();
-        FrmBusRegister view = new FrmBusRegister();
-
-        view.setVisible(true);
-        this.dispose();
 
         FrmPassenger frmPassenger;
         frmPassenger = new FrmPassenger();
         frmPassenger.setVisible(true);
         this.setVisible(false);
 
->>>>>>> 219e2d54d1aba5471fa414de719a7be4d82d38da
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed

@@ -1,6 +1,6 @@
-
 package espe.edu.ec.CoopLatinaMarco.view;
 
+import com.sun.xml.internal.bind.v2.runtime.reflect.Lister;
 import espe.edu.ec.CoopLatinaMarco.model.Passenger;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -23,23 +23,44 @@ public class FrmPassenger extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         initComponents();
+        populatePassengerTable();
+    }
+
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
+        return retValue;
+    }
+
+    public void populatePassengerTable() {
+        ArrayList<Passenger> passengers;
+        passengers = new ArrayList<>();
+        Passenger passenger;
+
+        passenger = new Passenger(1850599440, "Cesar Loor", "cesarloor68@gmail.com");
+        passengers.add(passenger);
+        passenger = new Passenger(1759674498, "Fernando Castillo", "Fer8@gmail.com");
+        passengers.add(passenger);
+        passenger = new Passenger(1758647822, "Ruben Blades", "Ruben@gmail.com");
+        passengers.add(passenger);
+
+        Object[][] objects = new Object[passengers.size()][3];
+        for (int i = 0; i < passengers.size(); i++) {
+            
+            objects[i][0] = passengers.get(i).getId();
+            objects[i][1] = passengers.get(i).getName();
+            objects[i][2] = passengers.get(i).getEmail();
+            
+             tblPassenger.setModel(new javax.swing.table.DefaultTableModel(
+                    objects,
+                    new String[]{
+                        "Id", "FullName", "E-mail",
+                    }
+            ));
+        }
 
     }
-    
-     @Override
-            public Image getIconImage(){
-            Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
-            return retValue;
-            } 
-        
-    
-     public void populatePassengerTable(){
-            ArrayList<Passenger> passengers;
-            passengers = new ArrayList<>();
-            Passenger passenger;
-            
 
-        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,7 +72,7 @@ public class FrmPassenger extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblPassenger = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -59,7 +80,7 @@ public class FrmPassenger extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblPassenger.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -71,7 +92,7 @@ public class FrmPassenger extends javax.swing.JFrame {
                 "Name", "Identification", "Email"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblPassenger);
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -130,10 +151,10 @@ public class FrmPassenger extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-         FrmCoopLatina view = new FrmCoopLatina();
+        FrmCoopLatina view = new FrmCoopLatina();
         view.setVisible(true);
         this.dispose();
-                       
+
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
@@ -177,6 +198,6 @@ public class FrmPassenger extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblPassenger;
     // End of variables declaration//GEN-END:variables
 }

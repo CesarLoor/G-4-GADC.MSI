@@ -1,6 +1,10 @@
 
 package espe.edu.ec.CoopLatinaMarco.model;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import org.bson.Document;
 
 /**
@@ -13,6 +17,8 @@ public class Passenger  extends BasicModel{
     private String name;
     private String email;
     
+    
+    
   
     
         public Document buildDocument() {
@@ -24,12 +30,21 @@ public class Passenger  extends BasicModel{
 
         return document;
     }
+       
 
     public Passenger(int id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
+     public void see(){
+        List<Passenger> passenger;
+        passenger = new ArrayList<>();
+        
+        
+        Set<String> names;
+        names = new TreeSet<>();
+        }
 
     @Override
     public String toString() {
