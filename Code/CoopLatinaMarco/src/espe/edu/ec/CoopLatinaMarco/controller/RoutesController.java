@@ -24,7 +24,7 @@ public class RoutesController {
         client = new MongoClient(clientURI);
         System.out.println("Successful connection");
 
-        userdatabase = client.getDatabase("Routes");
+        userdatabase = client.getDatabase("CoopLatina");
         return userdatabase;
     }
     public void CreateRoute(Route routes) {
@@ -34,7 +34,7 @@ public class RoutesController {
         Document document;
         
         userDB = EstablishConnection();
-        userCollection = userDB.getCollection("Rutas");
+        userCollection = userDB.getCollection("Routes");
 
         document = new Document();
         

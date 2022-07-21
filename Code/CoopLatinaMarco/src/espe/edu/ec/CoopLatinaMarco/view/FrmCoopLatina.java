@@ -1,4 +1,3 @@
-
 package espe.edu.ec.CoopLatinaMarco.view;
 
 import java.awt.Image;
@@ -130,6 +129,11 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenu2.setText("Help");
 
         jMenuItem3.setText("Contact");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
@@ -195,6 +199,13 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         view.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        FrmContact frmContact;
+        frmContact = new FrmContact();
+        frmContact.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments

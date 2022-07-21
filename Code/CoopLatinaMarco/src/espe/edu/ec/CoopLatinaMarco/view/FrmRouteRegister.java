@@ -155,7 +155,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblPriceError.setForeground(new java.awt.Color(153, 0, 153));
         lblPriceError.setText("Pls only digits");
 
-        cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avaible", "Not Avaible" }));
+        cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "yes", "no" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -331,20 +331,19 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         Route route;
-        RoutesController saveRoutes;
-
+        RoutesController saveRoute;
+        
         route = new Route();
-        saveRoutes = new RoutesController();
-       
-
+        saveRoute = new RoutesController();
+        
         route.setNameRoute(txtNameRoute.getText());
         route.setIdRoute(JTValidation(txtIdRoute.getText()));
         route.setDistanceKm(JTValidation(txtDistanceKm.getText()));
-        route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
-        //route.setAvalibleRoute(txtAvaibleRoute.getText());
+        //route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
+        route.setAvalibleRoute(avaibleRoute(cmbAvaibleRoute.getSelectedItem().toString()));
         
-        saveRoutes.CreateRoute(route);
-        JOptionPane.showMessageDialog(null, "Route add succesfull");
+       saveRoute.CreateRoute(route);
+       JOptionPane.showMessageDialog(null, "Route added succesfull");
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
@@ -465,7 +464,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
@@ -507,11 +506,15 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             validateInput= Integer.parseInt(Age);
                     
         }else{
-            JOptionPane.showMessageDialog(null, "La ruta o distancia debe ser un numero");
+            JOptionPane.showMessageDialog(null, "Customers must be in number format");
         }
         return validateInput;
         
         
         
+    }
+    public boolean avaibleRoute(String option){
+        
+        return option.toLowerCase().equals("yes");
     }
 }
