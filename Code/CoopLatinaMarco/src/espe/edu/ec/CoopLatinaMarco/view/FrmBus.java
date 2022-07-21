@@ -40,6 +40,22 @@ public final class FrmBus extends javax.swing.JFrame {
         buses.add(bus);
         bus = new Bus(9812,"PFE-201", "Gerardo Chicaiza", 4);
         buses.add(bus);
+        bus = new Bus(90892,"FDSC-9846", "Alison Chancusi", 5);
+        buses.add(bus);
+        bus = new Bus(93782,"JHGF-955", "Jonny Zapata", 6);
+        buses.add(bus); 
+        bus = new Bus(98719,"LKJ-4658", "Josue Montufar", 7);
+        buses.add(bus);
+        bus = new Bus(9812,"TTR-201", "Luis Chicaiza", 8);
+        buses.add(bus);
+        bus = new Bus(90892,"PDC-9855", "Sebastian Perez", 9);
+        buses.add(bus);
+        bus = new Bus(93782,"CDF-955", "Maria Mercedes", 10);
+        buses.add(bus); 
+        bus = new Bus(98719,"EDF-4658", "Mateo Gavidia", 11);
+        buses.add(bus);
+        bus = new Bus(9812,"PFE-201", "Yolanda Saltos", 12);
+        buses.add(bus);
     
         Object[][] objects = new Object[buses.size()][4];
     
@@ -50,7 +66,7 @@ public final class FrmBus extends javax.swing.JFrame {
             objects[i][3] = buses.get(i).getRoute();
             
 
-            tblBusTable.setModel(new javax.swing.table.DefaultTableModel(
+            tblBus.setModel(new javax.swing.table.DefaultTableModel(
                     objects,
                     new String[]{
                         "Id", "Matricule", "NameOfDriver", "Route"
@@ -68,12 +84,14 @@ public final class FrmBus extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblBus = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblBus.setBackground(new java.awt.Color(204, 204, 255));
+        tblBus.setForeground(new java.awt.Color(204, 0, 255));
+        tblBus.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -84,8 +102,10 @@ public final class FrmBus extends javax.swing.JFrame {
                 "Id", "Matricule", "NameOfDrive", "Route"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblBus);
 
+        jButton1.setBackground(new java.awt.Color(153, 153, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("<< Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +182,7 @@ public final class FrmBus extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblBus;
     // End of variables declaration//GEN-END:variables
     private javax.swing.JTable tblBusTable;
     

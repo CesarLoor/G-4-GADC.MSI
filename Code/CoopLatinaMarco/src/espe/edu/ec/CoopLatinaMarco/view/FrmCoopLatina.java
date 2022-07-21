@@ -1,4 +1,3 @@
-
 package espe.edu.ec.CoopLatinaMarco.view;
 
 import java.awt.Image;
@@ -139,6 +138,11 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenu2.setText("Help");
 
         jMenuItem3.setText("Contact");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuBar1.add(jMenu2);
@@ -200,13 +204,27 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuRoutesRegisterActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+<<<<<<< HEAD
 
         FrmPassenger view = new FrmPassenger();
         FrmBusRegister view = new FrmBusRegister();
 
         view.setVisible(true);
         this.dispose();
+=======
+        FrmPassenger frmPassenger;
+        frmPassenger = new FrmPassenger();
+        frmPassenger.setVisible(true);
+        this.setVisible(false);
+>>>>>>> 4951aeab16eda0cb2682bc616442230b6a79927a
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        FrmContact frmContact;
+        frmContact = new FrmContact();
+        frmContact.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
