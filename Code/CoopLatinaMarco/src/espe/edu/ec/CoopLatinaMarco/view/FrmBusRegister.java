@@ -18,6 +18,7 @@ public class FrmBusRegister extends javax.swing.JFrame {
     public FrmBusRegister() {
         initComponents();
         setDefaultCloseOperation(0);
+        setIconImage(getIconImage());
         
     }
     

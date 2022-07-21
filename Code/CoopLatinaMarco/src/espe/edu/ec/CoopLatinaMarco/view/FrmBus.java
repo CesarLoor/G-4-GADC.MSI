@@ -50,7 +50,7 @@ public final class FrmBus extends javax.swing.JFrame {
             objects[i][3] = buses.get(i).getRoute();
             
 
-            tblBusTable.setModel(new javax.swing.table.DefaultTableModel(
+            tblBus.setModel(new javax.swing.table.DefaultTableModel(
                     objects,
                     new String[]{
                         "Id", "Matricule", "NameOfDriver", "Route"
@@ -68,12 +68,12 @@ public final class FrmBus extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblBus = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblBus.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -84,7 +84,7 @@ public final class FrmBus extends javax.swing.JFrame {
                 "Id", "Matricule", "NameOfDrive", "Route"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblBus);
 
         jButton1.setText("<< Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +162,7 @@ public final class FrmBus extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblBus;
     // End of variables declaration//GEN-END:variables
     private javax.swing.JTable tblBusTable;
     
