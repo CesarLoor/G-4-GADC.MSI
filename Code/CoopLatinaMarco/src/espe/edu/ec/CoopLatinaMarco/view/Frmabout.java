@@ -16,6 +16,7 @@ public class Frmabout extends javax.swing.JFrame {
      */
     public Frmabout() {
         initComponents();
+        setTitle("About");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         setIconImage(getIconImage());
@@ -35,10 +36,12 @@ public class Frmabout extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jProgressBar1 = new javax.swing.JProgressBar();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btncback = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +57,8 @@ public class Frmabout extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("cooplatina2022@gmail.com");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -64,6 +69,10 @@ public class Frmabout extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 392, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(22, 22, 22))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(237, 237, 237))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,7 +84,9 @@ public class Frmabout extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btncback)))
-                .addContainerGap(336, Short.MAX_VALUE))
+                .addGap(111, 111, 111)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -151,6 +162,8 @@ public class Frmabout extends javax.swing.JFrame {
     private javax.swing.JButton btncback;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JProgressBar jProgressBar1;
     // End of variables declaration//GEN-END:variables
 }

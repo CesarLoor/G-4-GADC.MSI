@@ -22,7 +22,7 @@ public class FrmLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         initComponents();
-        
+        setTitle("Login");
         setIconImage(getIconImage());
         
     }
