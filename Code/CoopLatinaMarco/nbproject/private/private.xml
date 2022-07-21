@@ -2,6 +2,26 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/pc/Desktop/2do%20Semestre/Poo/codigo/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmLogin.java</file>
+            <file>file:/C:/Users/pc/Desktop/2do%20Semestre/Poo/codigo/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
+            <file>file:/C:/Users/pc/Desktop/2do%20Semestre/Poo/codigo/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerRegister.java</file>
+=======
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmBus.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmCoopLatina.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteRegister.java</file>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmContact.java</file>
+=======
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
+>>>>>>> b2bc23ae1b610d1826516d200b0e3828ff38d453
+>>>>>>> 791eebdeb97950b4b763ca01e6072a0225c02796
+        </group>
+>>>>>>> 2b399c80d26d78da06e61b430b97c8e8adc40fed
     </open-files>
 </project-private>

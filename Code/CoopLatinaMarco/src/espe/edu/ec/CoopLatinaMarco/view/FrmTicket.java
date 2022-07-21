@@ -21,6 +21,7 @@ public class FrmTicket extends javax.swing.JFrame {
     public FrmTicket() {
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         initComponents();
+        setTitle("Ticket");
         setIconImage(getIconImage());
         
         Connection connection = new Connection();

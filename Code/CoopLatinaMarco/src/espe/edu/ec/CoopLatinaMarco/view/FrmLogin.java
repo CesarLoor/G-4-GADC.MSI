@@ -17,8 +17,11 @@ public class FrmLogin extends javax.swing.JFrame {
      * Creates new form FrmCustomer
      */
     public FrmLogin() {
+        setTitle("CoopLatina");
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         initComponents();
-        
+        setTitle("Login");
         setIconImage(getIconImage());
         
     }
@@ -192,9 +195,7 @@ public class FrmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnLeaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeaveActionPerformed
-      FrmCoopLatina view = new FrmCoopLatina();
-      view.setVisible(false);
-      this.dispose();
+        System.exit(WIDTH);
     }//GEN-LAST:event_btnLeaveActionPerformed
 
     private void txtUserKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserKeyPressed
@@ -209,7 +210,7 @@ public class FrmLogin extends javax.swing.JFrame {
             txtPass.setEditable(true);
             lblUserError.setText("");
             if(length>10){
-                txtUser.setEditable(false);
+                txtUser.setEditable(true);
                 lblUserError.setText("Max 10 digits");
             
             }
