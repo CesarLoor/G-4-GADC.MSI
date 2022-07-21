@@ -3,7 +3,6 @@ package espe.edu.ec.CoopLatinaMarco.view;
 
 import java.awt.Image;
 import java.awt.Toolkit;
-import static javafx.application.Platform.exit;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
