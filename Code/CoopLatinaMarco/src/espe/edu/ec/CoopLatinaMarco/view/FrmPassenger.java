@@ -4,14 +4,18 @@ import com.sun.xml.internal.bind.v2.runtime.reflect.Lister;
 import espe.edu.ec.CoopLatinaMarco.model.Passenger;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.sql.Connection;
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
 public class FrmPassenger extends javax.swing.JFrame {
+    DefaultTableModel modelo;
+    
 
     /**
      * Creates new form Passenger
@@ -37,13 +41,21 @@ public class FrmPassenger extends javax.swing.JFrame {
         passengers = new ArrayList<>();
         Passenger passenger;
 
-        passenger = new Passenger(1850599440, "Cesar Loor", "cesarloor68@gmail.com");
+        passenger = new Passenger(1757413855, "Joaquin Olivera", "Joaq@homail.com");
         passengers.add(passenger);
-        passenger = new Passenger(1759674498, "Fernando Castillo", "Fer8@gmail.com");
+        passenger = new Passenger(1759654120, "Susana Diaz", "Susdi35@gmail.com");
         passengers.add(passenger);
-        passenger = new Passenger(1758647822, "Ruben Blades", "Ruben@gmail.com");
+        passenger = new Passenger(1756548952, "Miguel Montegro", "miguel-mo99@homail.com");
         passengers.add(passenger);
-
+        passenger = new Passenger(1757895428, "Pedro Paredes", "pedro.Pa15@homail.com");
+        passengers.add(passenger);
+        passenger = new Passenger(1751308577, "Jose Quintana", "quitaJose12@gmail.com");
+        passengers.add(passenger);
+        passenger = new Passenger(1759635741, "Pamela Vaca", "pamevc@outlook.com");
+        passengers.add(passenger);
+        
+        
+        
         Object[][] objects = new Object[passengers.size()][3];
         for (int i = 0; i < passengers.size(); i++) {
             
@@ -73,8 +85,12 @@ public class FrmPassenger extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPassenger = new javax.swing.JTable();
-        btnBack = new javax.swing.JButton();
+        btnRegister = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnUpdate = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        btnFind = new javax.swing.JButton();
+        btnMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,35 +105,58 @@ public class FrmPassenger extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Name", "Identification", "Email"
+                "Identifcation", "Name", "Email"
             }
         ));
         jScrollPane1.setViewportView(tblPassenger);
 
-        btnBack.setText("<<Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        btnRegister.setText("<<Register");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btnRegisterActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel1.setText("Table Of Passengers");
 
+        btnUpdate.setText("Update");
+
+        btnDelete.setText("Delete");
+
+        btnFind.setText("Find");
+
+        btnMenu.setText("Menu");
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(290, 290, 290)
+                .addGap(41, 41, 41)
+                .addComponent(btnMenu)
+                .addGap(174, 174, 174)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addComponent(btnRegister)
                 .addGap(14, 14, 14))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(btnUpdate)
+                .addGap(146, 146, 146)
+                .addComponent(btnDelete)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnFind)
+                .addGap(134, 134, 134))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,10 +164,16 @@ public class FrmPassenger extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(btnBack))
+                    .addComponent(btnRegister)
+                    .addComponent(btnMenu))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpdate)
+                    .addComponent(btnDelete)
+                    .addComponent(btnFind))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -150,12 +195,18 @@ public class FrmPassenger extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        FrmCoopLatina view = new FrmCoopLatina();
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
+        FrmPassengerRegister view = new FrmPassengerRegister();
         view.setVisible(true);
         this.dispose();
 
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btnRegisterActionPerformed
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        FrmCoopLatina view = new FrmCoopLatina();
+        view.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,7 +245,11 @@ public class FrmPassenger extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnFind;
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnRegister;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

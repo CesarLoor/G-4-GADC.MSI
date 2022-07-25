@@ -54,7 +54,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
-        btnUpdate = new javax.swing.JButton();
         lblUserError = new javax.swing.JLabel();
         btnTable = new javax.swing.JButton();
 
@@ -104,14 +103,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
             }
         });
 
-        btnUpdate.setBackground(new java.awt.Color(204, 255, 153));
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-
         lblUserError.setForeground(new java.awt.Color(204, 0, 0));
         lblUserError.setText("...");
 
@@ -145,8 +136,7 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lblUserError))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnUpdate)
-                                .addGap(26, 26, 26)
+                                .addGap(98, 98, 98)
                                 .addComponent(btnAdd)
                                 .addGap(35, 35, 35)
                                 .addComponent(btnTable)))
@@ -181,7 +171,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
                     .addComponent(btnAdd)
                     .addComponent(btnTable))
                 .addGap(75, 75, 75))
@@ -218,25 +207,27 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
        readFromInput();
        persistence.create("Passenger", passenger);
         
-//       int id;
-//       String name;
-//       String email;
-//       
-//       id = Integer.parseInt(txtId.getText());
-//       name = txtName.getText();
-//       email = txtEmail.getText();
-//       
-//        
-//       
-//       Passenger passenger = new Passenger(id, name, email);
-//       
-//       Connection connection = new Connection();
-//       connection.connectionDataBase();
-//       
-//       
-//       
-//      PassengerController passengerController = new PassengerController(passenger,"Passengers");
-//       passengerController.create();
+       int id;
+       String name;
+       String email;
+       
+       id = Integer.parseInt(txtId.getText());
+       name = txtName.getText();
+       email = txtEmail.getText();
+       
+        
+       
+       Passenger passenger = new Passenger(id, name, email);
+       
+       Connection connection = new Connection();
+       connection.connectionDataBase();
+       
+       
+       
+      PassengerController passengerController = new PassengerController(passenger,"Passengers");
+       passengerController.create();
+       
+       
     }//GEN-LAST:event_btnAddActionPerformed
         public void readFromInput(){
             int id;
@@ -248,10 +239,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
            email = (txtEmail.getText());
          
            passenger = new Passenger(id, name, email);
-         
-            
-           
-        
             
         }
     
@@ -283,11 +270,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
-
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        readFromInput();
-        persistence.update("Passenger", txtId.getText(), passenger);
-    }//GEN-LAST:event_btnUpdateActionPerformed
 
       
     /**
@@ -332,7 +314,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnTable;
-    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
