@@ -3,11 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/aldma/Downloads/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/TicketPassager.java</file>
             <file>file:/C:/Users/aldma/Downloads/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
             <file>file:/C:/Users/aldma/Downloads/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerRegister.java</file>
             <file>file:/C:/Users/aldma/Downloads/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteRegister.java</file>
             <file>file:/C:/Users/aldma/Downloads/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTicket.java</file>
+=======
+            <file>file:/C:/Users/pc/Desktop/2do%20Semestre/Poo/codigo/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
+            <file>file:/C:/Users/pc/Desktop/2do%20Semestre/Poo/codigo/G-4-GADC.MSI/Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/view/InputNumbersValidationTest.java</file>
+            <file>file:/C:/Users/pc/Desktop/2do%20Semestre/Poo/codigo/G-4-GADC.MSI/Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTicket.java</file>
+>>>>>>> b288673a0b6b59ced2b064a68ccc67f7e4d1d4ce
         </group>
     </open-files>
 </project-private>
