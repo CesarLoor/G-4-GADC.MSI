@@ -1,6 +1,5 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.Lister;
 import espe.edu.ec.CoopLatinaMarco.model.Passenger;
 import java.awt.Image;
 import java.awt.Toolkit;
