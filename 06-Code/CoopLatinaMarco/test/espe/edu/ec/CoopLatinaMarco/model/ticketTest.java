@@ -34,12 +34,12 @@ public class ticketTest {
     }
 
     /**
-     * Test of toString method, of class ticket.
+     * Test of toString method, of class Ticket.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        ticket instance = null;
+        Ticket instance = null;
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
@@ -48,12 +48,12 @@ public class ticketTest {
     }
 
     /**
-     * Test of getRoute method, of class ticket.
+     * Test of getRoute method, of class Ticket.
      */
     @Test
     public void testGetRoute() {
         System.out.println("getRoute");
-        ticket instance = null;
+        Ticket instance = null;
         String expResult = "";
         String result = instance.getRoute();
         assertEquals(expResult, result);
@@ -62,25 +62,25 @@ public class ticketTest {
     }
 
     /**
-     * Test of setRoute method, of class ticket.
+     * Test of setRoute method, of class Ticket.
      */
     @Test
     public void testSetRoute() {
         System.out.println("setRoute");
         String route = "";
-        ticket instance = null;
+        Ticket instance = null;
         instance.setRoute(route);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getBus method, of class ticket.
+     * Test of getBus method, of class Ticket.
      */
     @Test
     public void testGetBus() {
         System.out.println("getBus");
-        ticket instance = null;
+        Ticket instance = null;
         String expResult = "";
         String result = instance.getBus();
         assertEquals(expResult, result);
@@ -89,25 +89,25 @@ public class ticketTest {
     }
 
     /**
-     * Test of setBus method, of class ticket.
+     * Test of setBus method, of class Ticket.
      */
     @Test
     public void testSetBus() {
         System.out.println("setBus");
         String bus = "";
-        ticket instance = null;
+        Ticket instance = null;
         instance.setBus(bus);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getAddress method, of class ticket.
+     * Test of getAddress method, of class Ticket.
      */
     @Test
     public void testGetAddress() {
         System.out.println("getAddress");
-        ticket instance = null;
+        Ticket instance = null;
         String expResult = "";
         String result = instance.getAddress();
         assertEquals(expResult, result);
@@ -116,25 +116,25 @@ public class ticketTest {
     }
 
     /**
-     * Test of setAddress method, of class ticket.
+     * Test of setAddress method, of class Ticket.
      */
     @Test
     public void testSetAddress() {
         System.out.println("setAddress");
         String address = "";
-        ticket instance = null;
+        Ticket instance = null;
         instance.setAddress(address);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getPrice method, of class ticket.
+     * Test of getPrice method, of class Ticket.
      */
     @Test
     public void testGetPrice() {
         System.out.println("getPrice");
-        ticket instance = null;
+        Ticket instance = null;
         float expResult = 0.0F;
         float result = instance.getPrice();
         assertEquals(expResult, result, 0.0);
@@ -143,13 +143,13 @@ public class ticketTest {
     }
 
     /**
-     * Test of setPrice method, of class ticket.
+     * Test of setPrice method, of class Ticket.
      */
     @Test
     public void testSetPrice() {
         System.out.println("setPrice");
         float price = 0.0F;
-        ticket instance = null;
+        Ticket instance = null;
         instance.setPrice(price);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

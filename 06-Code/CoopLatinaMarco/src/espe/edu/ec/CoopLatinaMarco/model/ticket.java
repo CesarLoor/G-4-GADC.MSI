@@ -1,27 +1,29 @@
-
 package espe.edu.ec.CoopLatinaMarco.model;
 
 /**
  *
- * @author Loor Cesar,DDCO-ESPE,GADC.MSI
+ * @author Mateo Mendoza, DCCO-ESPE GADC.MSI
  */
-public class ticket {
-    
+public class Ticket {
+
     private String route;
     private String bus;
     private String address;
     private float price;
 
-    @Override
-    public String toString() {
-        return "ticket{" + "route=" + getRoute() + ", bus=" + getBus() + ", address=" + getAddress() + ", price=" + getPrice() + '}';
+    public Ticket() {
     }
-
-    public ticket(String route, String bus, String address, float price) {
+    
+    public Ticket(String route, String bus, String address, float price) {
         this.route = route;
         this.bus = bus;
         this.address = address;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "ticket{" + "route=" + getRoute() + ", bus=" + getBus() + ", address=" + getAddress() + ", price=" + getPrice() + '}';
     }
 
     /**
@@ -79,6 +81,5 @@ public class ticket {
     public void setPrice(float price) {
         this.price = price;
     }
-    
-    
+
 }
