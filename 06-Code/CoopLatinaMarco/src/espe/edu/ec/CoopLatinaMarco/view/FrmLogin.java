@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Loor Cesar,DDCO-ESPE,GADC.MSI
+ * @author Mateo Mendoza, DCCO-ESPE GADC.MSI
  */
 public class FrmLogin extends javax.swing.JFrame {
     
@@ -54,6 +54,8 @@ public class FrmLogin extends javax.swing.JFrame {
         lblUserError = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        CloseWindow = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -143,18 +145,43 @@ public class FrmLogin extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
+            .addGap(0, 460, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 510, 30));
+        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 460, 30));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 30)); // NOI18N
         jLabel1.setText("LOGIN");
         bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, -1, -1));
+
+        CloseWindow.setOpaque(false);
+
+        jLabel5.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 18)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("X");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CloseWindowLayout = new javax.swing.GroupLayout(CloseWindow);
+        CloseWindow.setLayout(CloseWindowLayout);
+        CloseWindowLayout.setHorizontalGroup(
+            CloseWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+        CloseWindowLayout.setVerticalGroup(
+            CloseWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        bg.add(CloseWindow, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 40, 30));
 
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 480));
 
@@ -170,15 +197,13 @@ public class FrmLogin extends javax.swing.JFrame {
           
         }else{
             if(usuario.equals("usuario") && password.equals("12345")){
-              JOptionPane.showMessageDialog(null, "Bienvenido");
+              JOptionPane.showMessageDialog(null, "Bienvenido a CoopLatina");
               FrmCoopLatina View = new FrmCoopLatina();
               View.setVisible(true);
               this.dispose();
             
             }
-        
-        
-        
+
         }
         
     }//GEN-LAST:event_btnLoginActionPerformed
@@ -221,6 +246,10 @@ public class FrmLogin extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanel1MouseDragged
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -258,6 +287,7 @@ public class FrmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CloseWindow;
     private javax.swing.JPanel bg;
     private javax.swing.JButton btnLeave;
     private javax.swing.JButton btnLogin;
@@ -265,6 +295,7 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel lblUserError;

@@ -17,12 +17,13 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         initComponents();
         setIconImage(getIconImage());
     }
-        
-        @Override
-            public Image getIconImage(){
-            Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
-            return retValue;
-            }
+
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
+        return retValue;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,6 +52,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/portada3.jpeg"))); // NOI18N
 
@@ -168,7 +170,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 13, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -231,14 +233,14 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         FrmBusRegister view = new FrmBusRegister();
         view.setVisible(true);
-        this.dispose();    
+        this.dispose();
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem6ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed1
         FrmTableTicket newframe = new FrmTableTicket();
-        
-        newframe.setVisible(true); 
-        
+
+        newframe.setVisible(true);
+
         this.dispose();
     }//GEN-LAST:event_jMenuItem6ActionPerformed1
 

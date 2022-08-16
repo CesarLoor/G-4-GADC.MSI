@@ -4,7 +4,7 @@ import org.bson.Document;
 
 /**
  *
- * @author Loor Cesar,DDCO-ESPE,GADC.MSI
+ * @author Mateo Mendoza, DCCO-ESPE GADC.MSI
  */
 public class TicketPassager extends BasicModel {
 
