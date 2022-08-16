@@ -18,11 +18,12 @@ import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
-import sun.security.krb5.internal.Ticket;
+
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
+import espe.edu.ec.CoopLatinaMarco.model.Ticket;
 
 /**
  *
@@ -35,6 +36,36 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
      */
     public FrmTableTicket() {
         initComponents();
+    }
+      
+    public void loadTicketTable() {
+        //borrar estas dos lineas despues de juntar todas las pantallas
+        Connection connection = new Connection();
+        connection.connectionDataBase();
+        //-------
+        CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        MongoDatabase db = Connection.mongodb.withCodecRegistry(codecRegistry);
+        MongoCollection<Ticket> collectionTickets = db.getCollection("tickets", Ticket.class);
+        List<Ticket> tickets = collectionTickets.find(new Document(), Ticket.class).into(new ArrayList<Ticket>());
+
+        Object[][] objects = new Object[tickets.size()][4];
+
+        for (int i = 0; i < tickets.size(); i++) {
+            objects[i][0] = tickets.get(i).getRoute();
+            objects[i][1] = tickets.get(i).getBus();
+            objects[i][2] = tickets.get(i).getAddress();
+            objects[i][3] = tickets.get(i).getPrice();
+
+            tableTicket.setModel(new javax.swing.table.DefaultTableModel(
+                    objects,
+                    new String[]{
+                        "Route", "Bus", "Adress", "Price"
+                    }
+            ));
+
+        }
+
     }
 
 
@@ -51,7 +82,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TableTicket = new javax.swing.JTable();
+        tableTicket = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
         btnPrint = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -65,7 +96,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Table Of Tickets");
 
-        TableTicket.setModel(new javax.swing.table.DefaultTableModel(
+        tableTicket.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -73,10 +104,18 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
                 {null, null, null, null}
             },
             new String [] {
-                "Rute", "Bus", "Adress", "Price"
+                "Route", "Bus", "Address", "Price"
             }
-        ));
-        jScrollPane1.setViewportView(TableTicket);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tableTicket);
 
         btnBack.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnBack.setText("Back");
@@ -177,7 +216,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
     }//GEN-LAST:event_btnPrintActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        loadTicketTable();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -219,7 +258,6 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TableTicket;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnPrint;
     private javax.swing.JButton jButton1;
@@ -227,6 +265,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tableTicket;
     // End of variables declaration//GEN-END:variables
 
     @Override

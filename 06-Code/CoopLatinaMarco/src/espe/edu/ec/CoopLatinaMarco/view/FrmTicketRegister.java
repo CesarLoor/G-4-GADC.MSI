@@ -251,8 +251,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
     private void txtPriceKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPriceKeyTyped
         char c = evt.getKeyChar();
         
-        if (c<'0' || c>'9') evt.consume();
-                
+        if (c<'0' || c>'9') evt.consume();              
     }//GEN-LAST:event_txtPriceKeyTyped
 
     private void txtAddressKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddressKeyTyped

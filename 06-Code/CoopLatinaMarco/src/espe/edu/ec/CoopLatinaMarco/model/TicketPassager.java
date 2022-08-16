@@ -1,4 +1,3 @@
-
 package espe.edu.ec.CoopLatinaMarco.model;
 
 import org.bson.Document;
@@ -7,16 +6,14 @@ import org.bson.Document;
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
-public class TicketPassager extends BasicModel{
-    
+public class TicketPassager extends BasicModel {
+
     private String route;
     private String bus;
     private String address;
     private float price;
 
-    @Override
-    public String toString() {
-        return "ticket{" + "route=" + getRoute() + ", bus=" + getBus() + ", address=" + getAddress() + ", price=" + getPrice() + '}';
+    public TicketPassager() {
     }
 
     public TicketPassager(String route, String bus, String address, float price) {
@@ -24,6 +21,11 @@ public class TicketPassager extends BasicModel{
         this.bus = bus;
         this.address = address;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "ticket{" + "route=" + getRoute() + ", bus=" + getBus() + ", address=" + getAddress() + ", price=" + getPrice() + '}';
     }
 
     /**
@@ -93,6 +95,5 @@ public class TicketPassager extends BasicModel{
 
         return document;
     }
-    
-    
+
 }
