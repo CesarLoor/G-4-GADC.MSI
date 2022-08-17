@@ -1,4 +1,3 @@
-
 package espe.edu.ec.CoopLatinaMarco.model;
 
 import org.bson.Document;
