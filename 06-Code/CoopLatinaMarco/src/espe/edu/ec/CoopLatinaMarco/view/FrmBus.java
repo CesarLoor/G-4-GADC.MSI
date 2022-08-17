@@ -2,6 +2,7 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
 import espe.edu.ec.CoopLatinaMarco.model.Bus;
+import espe.edu.ec.CoopLatinaMarco.model.Connection;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,10 @@ public final class FrmBus extends javax.swing.JFrame {
         
                    
         public void populateBusTable(){
+            
+        Connection connection = new Connection();
+        connection.connectionDataBase();
+        
         ArrayList<Bus> buses;
         buses = new ArrayList<>();
         Bus bus;
