@@ -1,6 +1,9 @@
 
 package espe.edu.ec.CoopLatinaMarco.view;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoDatabase;
 import espe.edu.ec.CoopLatinaMarco.model.Bus;
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
 
@@ -32,6 +35,10 @@ public final class FrmBus extends javax.swing.JFrame {
             
         Connection connection = new Connection();
         connection.connectionDataBase();
+        MongoClientURI clientURI;
+        MongoClient client;
+        MongoDatabase userdatabase;
+        String uri = "mongodb+srv://Steven1:Steven1@cluster0.izbkb5m.mongodb.net/?retryWrites=true&w=majority";
         
         ArrayList<Bus> buses;
         buses = new ArrayList<>();
