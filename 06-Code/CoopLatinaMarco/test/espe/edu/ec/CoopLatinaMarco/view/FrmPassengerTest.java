@@ -55,7 +55,7 @@ public class FrmPassengerTest {
     public void testPopulatePassengerTable() {
         System.out.println("populatePassengerTable");
         FrmPassenger instance = new FrmPassenger();
-        instance.populatePassengerTable();
+        instance.loadTicketTable();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
