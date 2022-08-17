@@ -69,7 +69,11 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+<<<<<<< HEAD
           <Color blue="99" green="99" red="0" type="rgb"/>
+=======
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="33" red="33" type="rgb"/>
@@ -253,8 +257,13 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
+<<<<<<< HEAD
                 <StringItem index="0" value="yes"/>
                 <StringItem index="1" value="no"/>
+=======
+                <StringItem index="0" value="Yes"/>
+                <StringItem index="1" value="No"/>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
               </StringArray>
             </Property>
           </Properties>
@@ -267,13 +276,18 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+<<<<<<< HEAD
           <Color blue="99" green="99" red="0" type="rgb"/>
+=======
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
         </Property>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
@@ -291,6 +305,21 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+=======
+              <Group type="102" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                  <Component id="btnAdd" min="-2" pref="65" max="-2" attributes="0"/>
+                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                  <Component id="btnSearch" min="-2" pref="75" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
               </Group>
           </Group>
         </DimensionLayout>
@@ -302,6 +331,7 @@
                       <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="btnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -309,6 +339,11 @@
                       <Component id="btnReturnToMainMenu" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnTable" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+=======
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -333,8 +368,16 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnSearch">
           <Properties>
+<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="Search"/>
           </Properties>
+=======
+            <Property name="text" type="java.lang.String" value="Update"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
+          </Events>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
         </Component>
         <Component class="javax.swing.JButton" name="btnDelete">
           <Properties>
@@ -344,6 +387,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
           </Events>
         </Component>
+<<<<<<< HEAD
         <Component class="javax.swing.JButton" name="btnUpdate">
           <Properties>
             <Property name="text" type="java.lang.String" value="Update"/>
@@ -357,6 +401,8 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTableActionPerformed"/>
           </Events>
         </Component>
+=======
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
       </SubComponents>
     </Container>
   </SubComponents>

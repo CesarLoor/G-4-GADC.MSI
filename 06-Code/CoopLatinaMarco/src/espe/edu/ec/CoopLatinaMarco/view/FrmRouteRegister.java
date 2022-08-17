@@ -62,8 +62,6 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         btnReturnToMainMenu = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
-        btnTable = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -79,7 +77,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 153));
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setForeground(new java.awt.Color(51, 51, 255));
 
         jLabel1.setText("Routes");
@@ -155,7 +153,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblPriceError.setForeground(new java.awt.Color(153, 0, 153));
         lblPriceError.setText("Pls only digits");
 
-        cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "yes", "no" }));
+        cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -223,7 +221,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -239,7 +237,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             }
         });
 
-        btnSearch.setText("Search");
+        btnSearch.setText("Update");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -248,35 +251,22 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             }
         });
 
-        btnUpdate.setText("Update");
-
-        btnTable.setText("Table");
-        btnTable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTableActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnReturnToMainMenu)
-                .addGap(47, 47, 47)
-                .addComponent(btnTable)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(btnAdd)
-                .addGap(18, 18, 18)
-                .addComponent(btnSearch)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(btnUpdate)
-                .addGap(28, 28, 28)
+                .addGap(110, 110, 110))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
                 .addComponent(btnDelete)
-                .addGap(26, 26, 26))
+                .addGap(34, 34, 34))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,12 +275,9 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(btnSearch)
-                    .addComponent(btnDelete)
-                    .addComponent(btnUpdate))
+                    .addComponent(btnDelete))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnReturnToMainMenu)
-                    .addComponent(btnTable))
+                .addComponent(btnReturnToMainMenu)
                 .addContainerGap())
         );
 
@@ -339,15 +326,15 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         route.setNameRoute(txtNameRoute.getText());
         route.setIdRoute(JTValidation(txtIdRoute.getText()));
         route.setDistanceKm(JTValidation(txtDistanceKm.getText()));
-        //route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
-        route.setAvalibleRoute(avaibleRoute(cmbAvaibleRoute.getSelectedItem().toString()));
+        route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
+        route.setAvalibleRoute(AvailableRoute(cmbAvaibleRoute.getSelectedItem().toString()));
         
        saveRoute.CreateRoute(route);
        JOptionPane.showMessageDialog(null, "Route added succesfull");
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "The route has been deleted");
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void lblIdErrorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblIdErrorKeyPressed
@@ -413,13 +400,6 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtNameRouteKeyPressed
 
-    private void btnTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTableActionPerformed
-        FrmRoutes frmRoutes;
-        frmRoutes = new FrmRoutes();
-        frmRoutes.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnTableActionPerformed
-
     private void txtNameRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameRouteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameRouteActionPerformed
@@ -428,6 +408,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     private void txtDistanceKmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDistanceKmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDistanceKmActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        JOptionPane.showMessageDialog(null, "The route has been updated");
+    }//GEN-LAST:event_btnSearchActionPerformed
 
     /**
      * @param args the command line arguments
@@ -470,8 +454,6 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnReturnToMainMenu;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JButton btnTable;
-    private javax.swing.JButton btnUpdate;
     private javax.swing.JComboBox<String> cmbAvaibleRoute;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -513,7 +495,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
         
     }
-    public boolean avaibleRoute(String option){
+    public boolean AvailableRoute(String option){
         
         return option.toLowerCase().equals("yes");
     }

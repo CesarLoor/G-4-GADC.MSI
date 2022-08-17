@@ -3,11 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTableTicket.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Connection.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/PassengerController.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
             <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTicketRegister.java</file>
+=======
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTableTicket.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmCoopLatina.java</file>
+            <file>file:/C:/Users/ASUS/Desktop/PROYECTO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmBus.java</file>
+>>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
         </group>
     </open-files>
 </project-private>
