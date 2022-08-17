@@ -7,34 +7,34 @@ import espe.edu.ec.CoopLatinaMarco.model.Passenger;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import util.FileManager;
-import util.Persistence;
 
 /**
  *
- * @author Loor Cesar,DDCO-ESPE,GADC.MSI
+ * @author Usuario
  */
 public class FrmPassengerRegister extends javax.swing.JFrame {
-
-    private Passenger passenger;
-    private Persistence persistence = new FileManager();
+        int xMouse, yMouse;
     /**
-     * Creates new form Passenger
+     * Creates new form FrmPassengerRegister
      */
     public FrmPassengerRegister() {
+    
         initComponents();
         setTitle("CoopLatina");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
         setIconImage(getIconImage());
+        
+        Connection connection = new Connection();
+        connection.connectionDataBase();
     }
-    @Override
-            public Image getIconImage(){
-            Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
-            return retValue;
-            } 
     
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("pictures/logo.jpeg"));
+        return retValue;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,27 +45,83 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        btnMenu = new javax.swing.JButton();
+        btnTable = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnAdd = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
+        btnAdd = new javax.swing.JButton();
         lblUserError = new javax.swing.JLabel();
-        btnTable = new javax.swing.JButton();
+        btnClean = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(500, 365));
 
-        jLabel1.setBackground(new java.awt.Color(255, 153, 51));
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel1.setText("Add Passenger");
+        jPanel2.setBackground(new java.awt.Color(153, 255, 153));
 
-        btnAdd.setBackground(new java.awt.Color(204, 255, 153));
+        btnMenu.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        btnMenu.setText("Menu");
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+
+        btnTable.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
+        btnTable.setText("Table");
+        btnTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTableActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMenu)
+                    .addComponent(btnTable))
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(btnMenu)
+                .addGap(47, 47, 47)
+                .addComponent(btnTable)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
+        jLabel1.setText("Register  of Passengers");
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setText("Name: ");
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel3.setText("Identification");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setText("Email");
+
+        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtIdKeyPressed(evt);
+            }
+        });
+
+        btnAdd.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         btnAdd.setText("Save");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,44 +129,13 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
             }
         });
 
-        btnBack.setText("<<Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        lblUserError.setText(".");
+
+        btnClean.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
+        btnClean.setText("Clean");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Id:");
-
-        jLabel3.setText("Name:");
-
-        jLabel4.setText("Email:");
-
-        txtId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdActionPerformed(evt);
-            }
-        });
-        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtIdKeyPressed(evt);
-            }
-        });
-
-        txtName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNameActionPerformed(evt);
-            }
-        });
-
-        lblUserError.setForeground(new java.awt.Color(204, 0, 0));
-        lblUserError.setText("...");
-
-        btnTable.setBackground(new java.awt.Color(204, 255, 153));
-        btnTable.setText("Table");
-        btnTable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTableActionPerformed(evt);
+                btnCleanActionPerformed(evt);
             }
         });
 
@@ -119,61 +144,55 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(btnClean)
+                            .addGap(43, 43, 43)
+                            .addComponent(btnAdd)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtId)
-                                    .addComponent(txtName)
-                                    .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblUserError))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(btnAdd)
-                                .addGap(35, 35, 35)
-                                .addComponent(btnTable)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 61, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(73, 73, 73)
-                        .addComponent(btnBack)
-                        .addGap(66, 66, 66))))
+                            .addComponent(txtName)
+                            .addComponent(txtId)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                        .addGap(29, 29, 29)
+                        .addComponent(lblUserError)))
+                .addGap(0, 114, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack)
-                    .addComponent(jLabel1))
-                .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblUserError)))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUserError))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
-                    .addComponent(btnTable))
-                .addGap(75, 75, 75))
+                    .addComponent(btnClean))
+                .addGap(70, 70, 70))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -181,32 +200,51 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         FrmCoopLatina view = new FrmCoopLatina();
         view.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnBackActionPerformed
+    }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-//        
-    }//GEN-LAST:event_txtIdActionPerformed
+    private void btnTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTableActionPerformed
+        FrmPassenger view = new FrmPassenger();
+        view.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnTableActionPerformed
+
+    private void txtIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyPressed
+       String value = txtId.getText();
+       int length = value.length();
+       if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+           txtId.setEditable(true);
+           lblUserError.setText("");
+           if(length>10){
+           txtId.setEditable(false);
+           lblUserError.setText("Max 10 digits");
+           }
+       }else{
+           txtId.setEditable(false);
+           lblUserError.setText("Only Digits");
+           
+       
+       }
+    }//GEN-LAST:event_txtIdKeyPressed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-       readFromInput();
-       persistence.create("Passenger", passenger);
-        
+ 
        int id;
        String name;
        String email;
@@ -214,64 +252,24 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
        id = Integer.parseInt(txtId.getText());
        name = txtName.getText();
        email = txtEmail.getText();
-       
-        
-       
-       Passenger passenger = new Passenger(id, name, email);
-       
-       Connection connection = new Connection();
-       connection.connectionDataBase();
-       
-       
-       
-      PassengerController passengerController = new PassengerController(passenger,"Passengers");
-       passengerController.create();
-       
-       
-    }//GEN-LAST:event_btnAddActionPerformed
-        public void readFromInput(){
-            int id;
-            String name;
-            String email;
-            
-           id = (Integer.parseInt(txtId.getText()));
-           name = (txtName.getText());
-           email = (txtEmail.getText());
-         
-           passenger = new Passenger(id, name, email);
-            
-        }
+ 
+      Passenger passenger = new Passenger(id, name, email);
     
-    private void txtIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyPressed
-        String value = txtId.getText();
-        int length = value.length();
-        if(evt.getKeyChar()>= '0' && evt.getKeyChar()<='9'){
-            txtId.setEditable(true);
-            lblUserError.setText("");
-            if(length>10){
-                txtId.setEditable(false);
-                lblUserError.setText("Max 10 digits");
-            
-            }
-        }else{
-            txtId.setEditable(true);
-            lblUserError.setText("Only digits");
+      PassengerController passengerController = new PassengerController(passenger,"Passengers");
+      passengerController.create();
         
-        
-        }
-    }//GEN-LAST:event_txtIdKeyPressed
+//     Passenger passenger = new Passenger(txtName.getText(),Integer.parseInt(txtId.getText()) , txtEmail.getText());
+//        
+//     PassengerController passengerController = new PassengerController(passenger,"Passengers");
+//     passengerController.create();
+    }//GEN-LAST:event_btnAddActionPerformed
 
-    private void btnTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTableActionPerformed
-       FrmPassenger newFrame = new FrmPassenger();
-       newFrame.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_btnTableActionPerformed
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        txtName.setText("");
+        txtId.setText("");
+        txtEmail.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
 
-    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameActionPerformed
-
-      
     /**
      * @param args the command line arguments
      */
@@ -298,9 +296,6 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FrmPassengerRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -312,13 +307,15 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnClean;
+    private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblUserError;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtId;

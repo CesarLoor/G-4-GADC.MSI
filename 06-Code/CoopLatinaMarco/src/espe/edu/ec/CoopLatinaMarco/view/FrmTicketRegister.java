@@ -23,6 +23,8 @@ public class FrmTicketRegister extends javax.swing.JFrame {
     public FrmTicketRegister() {
         initComponents();
         setTitle("Tickets");
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         setIconImage(getIconImage());        
         setDefaultCloseOperation(0);
         

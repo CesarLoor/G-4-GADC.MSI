@@ -1,19 +1,31 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import static com.mongodb.client.model.Filters.eq;
+import espe.edu.ec.CoopLatinaMarco.controller.BasicController;
+import espe.edu.ec.CoopLatinaMarco.controller.PassengerController;
 import espe.edu.ec.CoopLatinaMarco.model.Passenger;
+import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
 
 /**
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
 public class FrmPassenger extends javax.swing.JFrame {
-    DefaultTableModel modelo;
+   
     
 
     /**
@@ -23,10 +35,10 @@ public class FrmPassenger extends javax.swing.JFrame {
 
         setIconImage(getIconImage());
         setTitle("CoopLatina");
+        initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        initComponents();
-        populatePassengerTable();
+        
     }
 
     @Override
@@ -35,30 +47,21 @@ public class FrmPassenger extends javax.swing.JFrame {
         return retValue;
     }
 
-    public void populatePassengerTable() {
-        ArrayList<Passenger> passengers;
-        passengers = new ArrayList<>();
-        Passenger passenger;
+    public void loadTicketTable() {
+        Connection connection = new Connection();
+        connection.connectionDataBase();
+        
+        CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        MongoDatabase db = Connection.mongodb.withCodecRegistry(codecRegistry);
+        MongoCollection<Passenger>collectionPassengers = db.getCollection("Passengers",Passenger.class);
+        List<Passenger> passengers = collectionPassengers.find(new Document(), Passenger.class).into(new ArrayList<Passenger>());
 
-        passenger = new Passenger(1757413855, "Joaquin Olivera", "Joaq@homail.com");
-        passengers.add(passenger);
-        passenger = new Passenger(1759654120, "Susana Diaz", "Susdi35@gmail.com");
-        passengers.add(passenger);
-        passenger = new Passenger(1756548952, "Miguel Montegro", "miguel-mo99@homail.com");
-        passengers.add(passenger);
-        passenger = new Passenger(1757895428, "Pedro Paredes", "pedro.Pa15@homail.com");
-        passengers.add(passenger);
-        passenger = new Passenger(1751308577, "Jose Quintana", "quitaJose12@gmail.com");
-        passengers.add(passenger);
-        passenger = new Passenger(1759635741, "Pamela Vaca", "pamevc@outlook.com");
-        passengers.add(passenger);
-        
-        
         
         Object[][] objects = new Object[passengers.size()][3];
+        
         for (int i = 0; i < passengers.size(); i++) {
-            
-            objects[i][0] = passengers.get(i).getId();
+            objects[i][0] = passengers.get(i).getIdentificationCard();
             objects[i][1] = passengers.get(i).getName();
             objects[i][2] = passengers.get(i).getEmail();
             
@@ -88,7 +91,7 @@ public class FrmPassenger extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        btnFind = new javax.swing.JButton();
+        Load = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -97,6 +100,21 @@ public class FrmPassenger extends javax.swing.JFrame {
 
         tblPassenger.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -122,8 +140,18 @@ public class FrmPassenger extends javax.swing.JFrame {
         btnUpdate.setText("Update");
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
-        btnFind.setText("Find");
+        Load.setText("Load");
+        Load.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoadActionPerformed(evt);
+            }
+        });
 
         btnMenu.setText("Menu");
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +182,7 @@ public class FrmPassenger extends javax.swing.JFrame {
                 .addGap(146, 146, 146)
                 .addComponent(btnDelete)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnFind)
+                .addComponent(Load)
                 .addGap(134, 134, 134))
         );
         jPanel1Layout.setVerticalGroup(
@@ -171,7 +199,7 @@ public class FrmPassenger extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUpdate)
                     .addComponent(btnDelete)
-                    .addComponent(btnFind))
+                    .addComponent(Load))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -206,6 +234,18 @@ public class FrmPassenger extends javax.swing.JFrame {
         view.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
+
+    private void LoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadActionPerformed
+        loadTicketTable();
+    }//GEN-LAST:event_LoadActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        Object ob = tblPassenger.getModel().getValueAt(tblPassenger.getSelectedRow(), tblPassenger.getSelectedColumn());
+        PassengerController p = new PassengerController(new Passenger(), "Passengers");
+        p.delete("email", ob);
+        
+        
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,8 +284,8 @@ public class FrmPassenger extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Load;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnFind;
     private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton btnUpdate;

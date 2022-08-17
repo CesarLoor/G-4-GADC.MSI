@@ -6,6 +6,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
+import com.mongodb.client.result.DeleteResult;
 import espe.edu.ec.CoopLatinaMarco.model.BasicModel;
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import org.bson.Document;
@@ -37,13 +38,13 @@ public class BasicController<T extends BasicModel> {
 
     }
     
-    public FindIterable<Document> read(String id) {
+    public FindIterable<Document> read(String id, String idValue) {
 
-        return mongoCollection.find(eq(id));
+        return mongoCollection.find(eq(id, idValue));
     }
     
-    public void delete(String id, Object idValue) {
-        mongoCollection.deleteOne(eq(id, idValue));
+    public DeleteResult delete(String id, Object idValue) {
+        return mongoCollection.deleteOne(eq(id, idValue));
 
     }
     
