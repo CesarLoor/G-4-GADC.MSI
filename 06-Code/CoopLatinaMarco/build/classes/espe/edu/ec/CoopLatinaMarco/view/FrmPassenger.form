@@ -70,11 +70,7 @@
                   <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
                   <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-<<<<<<< HEAD
                   <Component id="Load" min="-2" max="-2" attributes="0"/>
-=======
-                  <Component id="btnFind" min="-2" max="-2" attributes="0"/>
->>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
                   <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -94,11 +90,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
                       <Component id="Load" alignment="3" min="-2" max="-2" attributes="0"/>
-=======
-                      <Component id="btnFind" alignment="3" min="-2" max="-2" attributes="0"/>
->>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
                   </Group>
                   <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
@@ -116,11 +108,7 @@
             <Component class="javax.swing.JTable" name="tblPassenger">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-<<<<<<< HEAD
                   <Table columnCount="3" rowCount="20">
-=======
-                  <Table columnCount="3" rowCount="5">
->>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
                     <Column editable="true" title="Identifcation" type="java.lang.Object"/>
                     <Column editable="true" title="Name" type="java.lang.Object"/>
                     <Column editable="true" title="Email" type="java.lang.Object"/>
@@ -177,7 +165,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Delete"/>
           </Properties>
-<<<<<<< HEAD
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
           </Events>
@@ -189,13 +176,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoadActionPerformed"/>
           </Events>
-=======
-        </Component>
-        <Component class="javax.swing.JButton" name="btnFind">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Find"/>
-          </Properties>
->>>>>>> 2023d5570679d84a82ff42e535d22a23921f5336
         </Component>
         <Component class="javax.swing.JButton" name="btnMenu">
           <Properties>

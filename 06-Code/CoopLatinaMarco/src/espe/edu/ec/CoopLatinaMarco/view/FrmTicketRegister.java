@@ -69,6 +69,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
         lblError5 = new javax.swing.JLabel();
         btnTableTicket = new javax.swing.JButton();
         Window = new javax.swing.JPanel();
+        btnClean = new javax.swing.JButton();
 
         jLabel3.setText("Bus");
 
@@ -130,7 +131,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 70, 30));
+        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 70, 30));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel1.setText("Route");
@@ -159,7 +160,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 76, 30));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 76, 30));
         jPanel1.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 218, 54, -1));
         jPanel1.add(lblError1, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 302, 54, -1));
         jPanel1.add(lblError2, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 347, 54, -1));
@@ -172,7 +173,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
                 btnTableTicketActionPerformed(evt);
             }
         });
-        jPanel1.add(btnTableTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, 30));
+        jPanel1.add(btnTableTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, 30));
 
         Window.setOpaque(false);
         Window.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -198,6 +199,15 @@ public class FrmTicketRegister extends javax.swing.JFrame {
         );
 
         jPanel1.add(Window, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 30));
+
+        btnClean.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
+        btnClean.setText("Clean");
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnClean, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, 30));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -291,6 +301,13 @@ public class FrmTicketRegister extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_WindowMouseDragged
 
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        txtRoute.setText("");
+        txtBus.setText("");
+        txtAddress.setText("");
+        txtPrice.setText("");
+    }//GEN-LAST:event_btnCleanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -331,6 +348,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
     private javax.swing.JPanel Window;
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnClean;
     private javax.swing.JButton btnTableTicket;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
