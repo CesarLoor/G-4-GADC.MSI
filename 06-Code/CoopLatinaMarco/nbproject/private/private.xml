@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Ticket.java</file>
             <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerTest.java</file>
             <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerRegister.java</file>
             <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
             <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/BusController.java</file>
             <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/build.xml</file>
+=======
+            <file>file:/C:/Users/aldma/Documents/G-4-GADC.MSI/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmLogin.java</file>
+            <file>file:/C:/Users/aldma/Documents/G-4-GADC.MSI/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTicketRegister.java</file>
+            <file>file:/C:/Users/aldma/Documents/G-4-GADC.MSI/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTableTicket.java</file>
+>>>>>>> 13d1402558123ca4dda70339f0a2a7f415fb0d99
         </group>
     </open-files>
 </project-private>
