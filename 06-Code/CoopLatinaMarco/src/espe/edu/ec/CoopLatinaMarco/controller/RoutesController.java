@@ -13,6 +13,9 @@ import org.bson.Document;
  */
 public class RoutesController {
        String collection;
+       MongoDatabase routeDB;
+       MongoCollection routeCollection;
+       Document document;
 
     public MongoDatabase EstablishConnection() {
         MongoClientURI clientURI;
@@ -28,13 +31,9 @@ public class RoutesController {
         return userdatabase;
     }
     public void CreateRoute(Route routes) {
-
-        MongoDatabase userDB;
-        MongoCollection userCollection;
-        Document document;
         
-        userDB = EstablishConnection();
-        userCollection = userDB.getCollection("Routes");
+        routeDB = EstablishConnection();
+        routeCollection = routeDB.getCollection("Routes");
 
         document = new Document();
         
@@ -44,7 +43,7 @@ public class RoutesController {
         document.append("price of route", routes.getPriceOfRoute());
         document.append("avaible routes", routes.isAvalibleRoute());
 
-        userCollection.insertOne(document);
+        routeCollection.insertOne(document);
 
     }
 }

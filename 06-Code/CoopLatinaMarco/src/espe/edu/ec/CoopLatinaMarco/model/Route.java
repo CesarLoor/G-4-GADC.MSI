@@ -1,5 +1,7 @@
 package espe.edu.ec.CoopLatinaMarco.model;
 
+import org.bson.Document;
+
 /**
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
@@ -106,6 +108,15 @@ public class Route {
     public void setAvalibleRoute(boolean avalibleRoute) {
         this.avalibleRoute = avalibleRoute;
     }
+    public Document buildDocument() {
+        Document document = new Document();
 
-   
+        document.append("Distance", this.distanceKm).
+                append("Avalible Route", this.avalibleRoute).
+                append("Id Route", this.idRoute).
+                append("Name Route", this.nameRoute).
+                append("Price Route", this.priceOfRoute);
+        return document;
+    }
+
 }

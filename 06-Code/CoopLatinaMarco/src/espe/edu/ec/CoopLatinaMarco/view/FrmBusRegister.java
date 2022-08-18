@@ -89,6 +89,11 @@ public class FrmBusRegister extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(204, 153, 255));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Add");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(204, 153, 255));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -226,6 +231,10 @@ public class FrmBusRegister extends javax.swing.JFrame {
         view.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

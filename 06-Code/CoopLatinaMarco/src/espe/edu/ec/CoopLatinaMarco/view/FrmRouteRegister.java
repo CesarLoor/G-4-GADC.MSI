@@ -331,6 +331,8 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
        saveRoute.CreateRoute(route);
        JOptionPane.showMessageDialog(null, "Route added succesfull");
+       CleanTxtFields();
+       
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
@@ -499,4 +501,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
         return option.toLowerCase().equals("yes");
     }
-}
+     public void CleanTxtFields(){
+    
+        txtNameRoute.setText("");
+        txtIdRoute.setText("");
+        txtDistanceKm.setText("");
+        txtPriceOfRoute.setText("");
+        
+    }
+}   
