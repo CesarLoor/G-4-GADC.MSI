@@ -257,11 +257,7 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
     
       PassengerController passengerController = new PassengerController(passenger,"Passengers");
       passengerController.create();
-        
-//     Passenger passenger = new Passenger(txtName.getText(),Integer.parseInt(txtId.getText()) , txtEmail.getText());
-//        
-//     PassengerController passengerController = new PassengerController(passenger,"Passengers");
-//     passengerController.create();
+      
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
