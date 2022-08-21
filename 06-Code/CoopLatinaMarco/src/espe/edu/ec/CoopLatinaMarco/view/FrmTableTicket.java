@@ -41,6 +41,8 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
     public FrmTableTicket() {
         initComponents();
         setTitle("Tickets");
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         setIconImage(getIconImage());      
         setDefaultCloseOperation(0);
     }

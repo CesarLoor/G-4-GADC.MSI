@@ -2,6 +2,7 @@ package espe.edu.ec.CoopLatinaMarco.view;
 
 import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
 import espe.edu.ec.CoopLatinaMarco.model.Route;
+import espe.edu.ec.CoopLatinaMarco.view.FrmCoopLatina;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
@@ -80,17 +81,23 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setForeground(new java.awt.Color(51, 51, 255));
 
-        jLabel1.setText("Routes");
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel1.setText("Rutas");
 
-        jLabel2.setText("Name Route");
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel2.setText("Nombre de ruta");
 
-        jLabel3.setText("ID Route");
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel3.setText("Id de la ruta");
 
-        jLabel4.setText("Distance KM");
+        jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel4.setText("Distancia (KM)");
 
-        jLabel5.setText("Price of Route");
+        jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel5.setText("Precio de la ruta");
 
-        jLabel6.setText("Avaible Route");
+        jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel6.setText("Ruta disponible");
 
         txtNameRoute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,10 +144,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         });
 
         lblNameError.setForeground(new java.awt.Color(153, 0, 153));
-        lblNameError.setText("Name not valid!!");
+        lblNameError.setText("Nombre no valido!!");
 
         lblIdError.setForeground(new java.awt.Color(153, 0, 153));
-        lblIdError.setText("Pls only digits");
+        lblIdError.setText("Sólo digitos");
         lblIdError.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 lblIdErrorKeyPressed(evt);
@@ -148,12 +155,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         });
 
         lblDistanceError.setForeground(new java.awt.Color(153, 0, 153));
-        lblDistanceError.setText("Pls only digits");
+        lblDistanceError.setText("Sólo digitos");
 
         lblPriceError.setForeground(new java.awt.Color(153, 0, 153));
-        lblPriceError.setText("Pls only digits");
+        lblPriceError.setText("Sólo digitos");
 
-        cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No" }));
+        cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "No disponible" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -223,28 +230,28 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
-        btnAdd.setText("Add");
+        btnAdd.setText("Añadir");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
 
-        btnReturnToMainMenu.setText("Return to main menu");
+        btnReturnToMainMenu.setText("Volver al menú principal");
         btnReturnToMainMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnToMainMenuActionPerformed(evt);
             }
         });
 
-        btnSearch.setText("Update");
+        btnSearch.setText("Actualizar");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
             }
         });
 
-        btnDelete.setText("Delete");
+        btnDelete.setText("Eliminar");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -255,18 +262,18 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnReturnToMainMenu)
-                .addGap(110, 110, 110))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addComponent(btnAdd)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSearch)
+                .addGap(57, 57, 57)
                 .addComponent(btnDelete)
                 .addGap(34, 34, 34))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(btnReturnToMainMenu)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -48,6 +48,12 @@ public class BusController {
         userCollection.insertOne(document);
 
     }
+     MongoClientURI clientURI;
+        MongoClient client;
+        MongoDatabase userdatabase;
+        String uri = "mongodb+srv://Steven1:Steven1@cluster0.izbkb5m.mongodb.net/?retryWrites=true&w=majority";
+
+        
 }
 
    

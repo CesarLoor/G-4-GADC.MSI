@@ -13,18 +13,19 @@ import org.bson.Document;
  */
 public class Passenger  extends BasicModel{
     
-    private int id;
+    private int identificationCard;
     private String name;
     private String email;
+
     
     
+    public Passenger(){}
     
-  
-    
+    @Override
         public Document buildDocument() {
         Document document = new Document();
 
-        document.append("id", this.id).
+        document.append("id", this.identificationCard).
                 append("name", this.name).
                 append("email", this.email);
 
@@ -33,39 +34,39 @@ public class Passenger  extends BasicModel{
        
 
     public Passenger(int id, String name, String email) {
-        this.id = id;
+        this.identificationCard = id;
         this.name = name;
         this.email = email;
     }
-     public void see(){
-        List<Passenger> passenger;
-        passenger = new ArrayList<>();
-        
-        
-        Set<String> names;
-        names = new TreeSet<>();
-        }
+//     public void see(){
+//        List<Passenger> passenger;
+//        passenger = new ArrayList<>();
+//        
+//        
+//        Set<String> names;
+//        names = new TreeSet<>();
+//        }
 
     @Override
     public String toString() {
-        return "Passenger{" + "id=" + getId() + ", name=" + getName() + ", email=" + getEmail() + '}';
+        return "Passenger{" + "id=" + getIdentificationCard() + ", name=" + getName() + ", email=" + getEmail() + '}';
         
     }
     
    
 
     /**
-     * @return the id
+     * @return the identificationCard
      */
-    public int getId() {
-        return id;
+    public int getIdentificationCard() {
+        return identificationCard;
     }
 
     /**
-     * @param id the id to set
+     * @param identificationCard the identificationCard to set
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setIdentificationCard(int identificationCard) {
+        this.identificationCard = identificationCard;
     }
 
     /**
