@@ -45,22 +45,29 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="32767" attributes="0"/>
+              <Component id="jLabel8" min="-2" pref="373" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="jLabel8" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel2" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,22 +100,27 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="cmbAvaibleRoute" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtNameRoute" alignment="0" pref="117" max="32767" attributes="0"/>
+                              <Component id="cmbAvaibleRoute" alignment="0" pref="117" max="32767" attributes="0"/>
+                              <Component id="txtNameRoute" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtIdRoute" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtDistanceKm" alignment="0" max="32767" attributes="0"/>
                               <Component id="txtPriceOfRoute" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblNameError" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblIdError" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblDistanceError" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblPriceError" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblNameError" alignment="0" pref="115" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblIdError" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDistanceError" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblPriceError" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -162,74 +174,50 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-<<<<<<< HEAD
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Rutas"/>
-=======
-            <Property name="text" type="java.lang.String" value="Routes"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-<<<<<<< HEAD
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="12" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nombre de ruta"/>
-=======
-            <Property name="text" type="java.lang.String" value="Name Route"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
+            <Property name="text" type="java.lang.String" value="Nombre de la ruta"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
-<<<<<<< HEAD
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Id de la ruta"/>
-=======
-            <Property name="text" type="java.lang.String" value="ID Route"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-<<<<<<< HEAD
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Distancia (KM)"/>
-=======
-            <Property name="text" type="java.lang.String" value="Distance KM"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-<<<<<<< HEAD
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Precio de la ruta"/>
-=======
-            <Property name="text" type="java.lang.String" value="Price of Route"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-<<<<<<< HEAD
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ruta disponible"/>
-=======
-            <Property name="text" type="java.lang.String" value="Avaible Route"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNameRoute">
@@ -261,11 +249,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="0" red="99" type="rgb"/>
             </Property>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="Nombre no valido!!"/>
-=======
-            <Property name="text" type="java.lang.String" value="Name not valid!!"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblIdError">
@@ -273,11 +257,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="0" red="99" type="rgb"/>
             </Property>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="S&#xf3;lo digitos"/>
-=======
-            <Property name="text" type="java.lang.String" value="Pls only digits"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
           <Events>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lblIdErrorKeyPressed"/>
@@ -288,11 +268,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="0" red="99" type="rgb"/>
             </Property>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="S&#xf3;lo digitos"/>
-=======
-            <Property name="text" type="java.lang.String" value="Pls only digits"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPriceError">
@@ -300,24 +276,15 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="0" red="99" type="rgb"/>
             </Property>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="S&#xf3;lo digitos"/>
-=======
-            <Property name="text" type="java.lang.String" value="Pls only digits"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="cmbAvaibleRoute">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
-<<<<<<< HEAD
                 <StringItem index="0" value="Disponible"/>
                 <StringItem index="1" value="No disponible"/>
-=======
-                <StringItem index="0" value="Yes"/>
-                <StringItem index="1" value="No"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
               </StringArray>
             </Property>
           </Properties>
@@ -337,51 +304,37 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                  <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-                  <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-=======
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                          <Component id="btnSearch" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="btnAdd" min="-2" pref="65" max="-2" attributes="0"/>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
-                  <Component id="btnSearch" min="-2" pref="75" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="btnDelete" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              </Group>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="btnReturnToMainMenu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -389,11 +342,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnAdd">
           <Properties>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="A&#xf1;adir"/>
-=======
-            <Property name="text" type="java.lang.String" value="Add"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
@@ -401,11 +350,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnReturnToMainMenu">
           <Properties>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="Volver al men&#xfa; principal"/>
-=======
-            <Property name="text" type="java.lang.String" value="Return to main menu"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReturnToMainMenuActionPerformed"/>
@@ -413,11 +358,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnSearch">
           <Properties>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="Actualizar"/>
-=======
-            <Property name="text" type="java.lang.String" value="Update"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
@@ -425,11 +366,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnDelete">
           <Properties>
-<<<<<<< HEAD
             <Property name="text" type="java.lang.String" value="Eliminar"/>
-=======
-            <Property name="text" type="java.lang.String" value="Delete"/>
->>>>>>> 2696e7841d7c8900eab7e51c5b45ac8b60120c98
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
@@ -437,5 +374,13 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/pictures/Rutas.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabel8"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
