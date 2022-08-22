@@ -11,11 +11,15 @@ import org.bson.Document;
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
-public class RoutesController {
+public class RoutesController  {
        String collection;
        MongoDatabase routeDB;
        MongoCollection routeCollection;
        Document document;
+
+    public RoutesController(Route route, String routes) {
+       
+    }
 
     public MongoDatabase EstablishConnection() {
         MongoClientURI clientURI;
@@ -45,5 +49,9 @@ public class RoutesController {
 
         routeCollection.insertOne(document);
 
+    }
+
+    public void CreateRoute() {
+      
     }
 }

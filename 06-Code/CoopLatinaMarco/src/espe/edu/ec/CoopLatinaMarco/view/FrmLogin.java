@@ -82,7 +82,7 @@ public class FrmLogin extends javax.swing.JFrame {
         bg.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 480));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel2.setText("User:");
+        jLabel2.setText("Usuario:");
         bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, -1, -1));
 
         txtUser.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -93,7 +93,7 @@ public class FrmLogin extends javax.swing.JFrame {
         bg.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 161, -1));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel3.setText("Password:");
+        jLabel3.setText("Contraseña:");
         bg.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
         txtPass.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -104,7 +104,7 @@ public class FrmLogin extends javax.swing.JFrame {
         bg.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 161, -1));
 
         btnLeave.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
-        btnLeave.setText("Leave");
+        btnLeave.setText("Salir");
         btnLeave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLeave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,7 +114,7 @@ public class FrmLogin extends javax.swing.JFrame {
         bg.add(btnLeave, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, -1, -1));
 
         btnLogin.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 18)); // NOI18N
-        btnLogin.setText("Sign in");
+        btnLogin.setText("Ingresar");
         btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,7 +155,7 @@ public class FrmLogin extends javax.swing.JFrame {
         bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 0, 460, 30));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 30)); // NOI18N
-        jLabel1.setText("LOGIN");
+        jLabel1.setText("Inicio");
         bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, -1, -1));
 
         CloseWindow.setOpaque(false);

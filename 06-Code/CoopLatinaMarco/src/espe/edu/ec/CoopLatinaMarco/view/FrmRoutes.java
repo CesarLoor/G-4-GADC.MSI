@@ -98,7 +98,7 @@ public class FrmRoutes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ROUTES");
+        jLabel1.setText("Rutas");
 
         tblRouteTable.setBackground(new java.awt.Color(204, 204, 255));
         tblRouteTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -106,19 +106,19 @@ public class FrmRoutes extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Name Route", "ID Route", "Distance KM", "Price of Route", "Avaible Route"
+                "Nombre de Ruta", "ID Ruta", "Distancia KM", "Precio", "Disponibilidad"
             }
         ));
         jScrollPane1.setViewportView(tblRouteTable);
 
-        jButton1.setText("Return to main menu");
+        jButton1.setText("Retornar Menú");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Return to route register");
+        jButton2.setText("Retornar Registro de Rutas");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

@@ -75,7 +75,7 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         });
 
         btnTable.setFont(new java.awt.Font("Cambria", 0, 18)); // NOI18N
-        btnTable.setText("Table");
+        btnTable.setText("Tabla");
         btnTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTableActionPerformed(evt);
@@ -104,13 +104,13 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         );
 
         jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
-        jLabel1.setText("Register  of Passengers");
+        jLabel1.setText("Registro de pasajeros");
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel2.setText("Name: ");
+        jLabel2.setText("Nombre: ");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel3.setText("Identification");
+        jLabel3.setText("Identificación");
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel4.setText("Email");
@@ -122,7 +122,7 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         });
 
         btnAdd.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        btnAdd.setText("Save");
+        btnAdd.setText("Guardar");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
@@ -132,7 +132,7 @@ public class FrmPassengerRegister extends javax.swing.JFrame {
         lblUserError.setText(".");
 
         btnClean.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        btnClean.setText("Clean");
+        btnClean.setText("Limpiar");
         btnClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCleanActionPerformed(evt);

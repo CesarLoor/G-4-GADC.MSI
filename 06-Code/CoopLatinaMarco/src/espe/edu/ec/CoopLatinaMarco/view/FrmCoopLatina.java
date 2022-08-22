@@ -53,11 +53,11 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/banner.jpeg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/porta2.jpeg"))); // NOI18N
 
         jMenu1.setText("CoopLatina");
 
-        jMenuItem1.setText("About");
+        jMenuItem1.setText("Info");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -65,7 +65,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem5.setText("Bus");
+        jMenuItem5.setText("Lista de buses");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -75,9 +75,10 @@ public class FrmCoopLatina extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu4.setText("Passenger");
+        jMenu4.setText("Pasajeros");
 
-        jMenuItem2.setText("Add Passenger");
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setText("Añadir Pasajeros");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -85,7 +86,8 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem2);
 
-        jMenuItem7.setText("List of Passenger");
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem7.setText("Lista de Pasajeros");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
@@ -95,9 +97,9 @@ public class FrmCoopLatina extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setText("Passage");
+        jMenu5.setText("Pasaje");
 
-        jMenuItem4.setText("Buy Ticket");
+        jMenuItem4.setText("Comprar boleto");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -105,7 +107,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem4);
 
-        jMenuItem6.setText("Print Ticket");
+        jMenuItem6.setText("Imprimir boleto");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed1(evt);
@@ -115,10 +117,10 @@ public class FrmCoopLatina extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu6.setText("Routes");
+        jMenu6.setText("Rutas");
 
         mnuRoutesRegister.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mnuRoutesRegister.setText("Routes Register");
+        mnuRoutesRegister.setText("Registar rutas");
         mnuRoutesRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRoutesRegisterActionPerformed(evt);
@@ -127,7 +129,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenu6.add(mnuRoutesRegister);
 
         mnuRoutesTable.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mnuRoutesTable.setText("Routes Table");
+        mnuRoutesTable.setText("Lista de rutas");
         mnuRoutesTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuRoutesTableActionPerformed(evt);
@@ -137,9 +139,9 @@ public class FrmCoopLatina extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu2.setText("Help");
+        jMenu2.setText("Ayuda");
 
-        jMenuItem3.setText("Contact");
+        jMenuItem3.setText("Contacto");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -155,13 +157,14 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();

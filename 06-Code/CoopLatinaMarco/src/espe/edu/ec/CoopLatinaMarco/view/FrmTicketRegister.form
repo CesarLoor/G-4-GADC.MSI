@@ -137,14 +137,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cascadia Code" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Add"/>
+                <Property name="text" type="java.lang.String" value="Agregar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="260" y="330" width="70" height="30"/>
+                  <AbsoluteConstraints x="260" y="330" width="100" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -153,11 +153,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Route"/>
+                <Property name="text" type="java.lang.String" value="Ruta"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="100" width="63" height="-1"/>
+                  <AbsoluteConstraints x="120" y="100" width="63" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -170,7 +170,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="150" width="63" height="29"/>
+                  <AbsoluteConstraints x="120" y="150" width="63" height="29"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -179,11 +179,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Adress"/>
+                <Property name="text" type="java.lang.String" value="Direcci&#xf3;n"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="200" width="63" height="29"/>
+                  <AbsoluteConstraints x="120" y="200" width="70" height="29"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -192,11 +192,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Price"/>
+                <Property name="text" type="java.lang.String" value="Precio"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="250" width="63" height="29"/>
+                  <AbsoluteConstraints x="120" y="250" width="63" height="29"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -205,11 +205,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Harlow Solid Italic" size="36" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ticket"/>
+                <Property name="text" type="java.lang.String" value="Boleto"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="200" y="10" width="99" height="-1"/>
+                  <AbsoluteConstraints x="160" y="10" width="120" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -218,14 +218,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cascadia Code" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Back"/>
+                <Property name="text" type="java.lang.String" value="Volver"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="30" y="330" width="76" height="30"/>
+                  <AbsoluteConstraints x="30" y="330" width="90" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -262,7 +262,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cascadia Code" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Table"/>
+                <Property name="text" type="java.lang.String" value="Tabla"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTableTicketActionPerformed"/>
@@ -305,7 +305,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Cascadia Code" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Clean"/>
+                <Property name="text" type="java.lang.String" value="Limpiar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCleanActionPerformed"/>

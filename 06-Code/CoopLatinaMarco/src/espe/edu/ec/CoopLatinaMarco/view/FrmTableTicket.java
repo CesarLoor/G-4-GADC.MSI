@@ -117,7 +117,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 30)); // NOI18N
-        jLabel2.setText("Table Of Tickets");
+        jLabel2.setText("Tabla de Boletos");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 210, 35));
 
         tableTicket.setModel(new javax.swing.table.DefaultTableModel(
@@ -128,7 +128,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
                 {null, null, null, null}
             },
             new String [] {
-                "Route", "Bus", "Address", "Price"
+                "Ruta", "Bus", "Dirección", "Precio"
             }
         ) {
             Class[] types = new Class [] {
@@ -144,7 +144,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 483, 216));
 
         btnBack.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnBack.setText("Back");
+        btnBack.setText("Menú");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -153,7 +153,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, -1, -1));
 
         btnPrint.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnPrint.setText("Print");
+        btnPrint.setText("Imprimir");
         btnPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPrintActionPerformed(evt);
@@ -162,7 +162,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jPanel1.add(btnPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, -1, -1));
 
         btnLoad.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnLoad.setText("Load");
+        btnLoad.setText("Cargar");
         btnLoad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoadActionPerformed(evt);
@@ -171,7 +171,7 @@ public class FrmTableTicket extends javax.swing.JFrame implements Printable {
         jPanel1.add(btnLoad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        jButton1.setText("Ticket");
+        jButton1.setText("Boleto");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

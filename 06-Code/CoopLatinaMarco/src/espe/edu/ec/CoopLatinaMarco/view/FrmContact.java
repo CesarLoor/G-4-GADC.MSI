@@ -44,23 +44,23 @@ public class FrmContact extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(204, 255, 204));
         jButton1.setFont(new java.awt.Font("Cascadia Code", 0, 14)); // NOI18N
-        jButton1.setText("Return to main menu");
+        jButton1.setText("Retornar Menú");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 30)); // NOI18N
-        jLabel1.setText("Please contact us through this email ");
+        jLabel1.setText("Por favor contáctenos a través de este correo electrónico");
         jLabel1.setOpaque(true);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Harlow Solid Italic", 0, 30)); // NOI18N
         jLabel2.setText("cooplatina2022@gmail.com");
         jLabel2.setOpaque(true);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, 40));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, 40));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/Help.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
