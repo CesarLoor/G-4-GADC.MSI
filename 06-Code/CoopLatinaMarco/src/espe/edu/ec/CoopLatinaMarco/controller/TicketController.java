@@ -1,4 +1,3 @@
-
 package espe.edu.ec.CoopLatinaMarco.controller;
 import espe.edu.ec.CoopLatinaMarco.model.TicketPassager;
 
