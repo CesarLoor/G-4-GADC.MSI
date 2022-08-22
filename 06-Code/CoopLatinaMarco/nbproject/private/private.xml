@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerTest.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/model/ticketTest.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/util/FileManager.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/view/InputNumbersValidationTest.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/model/BusTest.java</file>
-=======
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmCoopLatina.java</file>
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Ticket.java</file>
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/test/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerTest.java</file>
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerRegister.java</file>
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/BusController.java</file>
-            <file>file:/C:/Users/pc/Documents/Repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/build.xml</file>
->>>>>>> c8e5d53ea0500bc2f9d4b56af9594d47b6295427
-        </group>
+        <group/>
     </open-files>
 </project-private>
