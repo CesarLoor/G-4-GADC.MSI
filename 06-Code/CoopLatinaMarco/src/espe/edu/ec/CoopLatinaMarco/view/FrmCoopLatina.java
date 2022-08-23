@@ -195,9 +195,9 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void mnuRoutesTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuRoutesTableActionPerformed
-        FrmRoutes frmRoutes;
-        frmRoutes = new FrmRoutes();
-        frmRoutes.setVisible(true);
+        FrmRouteTable frmRouteTable;
+        frmRouteTable = new FrmRouteTable();
+        frmRouteTable.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_mnuRoutesTableActionPerformed
 

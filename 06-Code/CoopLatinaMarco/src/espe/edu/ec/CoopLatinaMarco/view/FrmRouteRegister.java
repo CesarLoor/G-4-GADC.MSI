@@ -66,7 +66,8 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         btnReturnToMainMenu = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        btnAdd = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -264,10 +265,17 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             }
         });
 
-        btnAdd.setText("Añadir");
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Añadir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Lista de rutas");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -275,19 +283,20 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(btnSearch)
+                .addGap(55, 55, 55)
+                .addComponent(btnDelete)
+                .addGap(35, 35, 35))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnAdd)
-                        .addGap(50, 50, 50)
-                        .addComponent(btnSearch)
-                        .addGap(55, 55, 55)
-                        .addComponent(btnDelete)
-                        .addGap(35, 35, 35))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnReturnToMainMenu)
-                        .addGap(121, 121, 121))))
+                .addGap(81, 81, 81)
+                .addComponent(btnReturnToMainMenu)
+                .addGap(39, 39, 39)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,9 +305,11 @@ public class FrmRouteRegister extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSearch)
                     .addComponent(btnDelete)
-                    .addComponent(btnAdd))
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnReturnToMainMenu)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReturnToMainMenu)
+                    .addComponent(jButton2))
                 .addGap(34, 34, 34))
         );
 
@@ -463,12 +474,13 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
     }//GEN-LAST:event_cmbAvaibleRouteActionPerformed
 
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         String nameRoute;
         int idRoute;
         int distanceKm;
         int priceOfRoute;
-        boolean avalibleRoute=true;
+        boolean avalibleRoute = true;
         
         nameRoute = txtNameRoute.getText();
         idRoute = Integer.parseInt(txtIdRoute.getText());
@@ -480,7 +492,14 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
         RoutesController routesController = new RoutesController(route,"Routes");
         routesController.create();
-    }//GEN-LAST:event_btnAddActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FrmRouteTable frmRouteTable;
+        frmRouteTable = new FrmRouteTable();
+        frmRouteTable.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -525,11 +544,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnReturnToMainMenu;
     private javax.swing.JButton btnSearch;
     private javax.swing.JComboBox<String> cmbAvaibleRoute;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
