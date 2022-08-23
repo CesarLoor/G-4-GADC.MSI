@@ -28,6 +28,7 @@ public class Route extends BasicModel{
     }
 
     public Route(){}
+    
     @Override
     public Document buildDocument() {
         Document document = new Document();
@@ -48,22 +49,15 @@ public class Route extends BasicModel{
         this.avalibleRoute = avalibleRoute;
     }
 
-<<<<<<< HEAD
-
-=======
-   
-    
-    
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
-    @Override
+    /**
+     *
+     * @return
+     */
+    @ Override
     public String toString() {
         return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + ", avalibleRoute=" + avalibleRoute + '}';
     }
-<<<<<<< HEAD
-=======
 
-    
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
     
     /**
      * @return the nameRoute
