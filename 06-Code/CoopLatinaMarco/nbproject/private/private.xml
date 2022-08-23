@@ -2,14 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteRegister.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Route.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmTableTicket.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteRegister.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/RoutesController.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassengerRegister.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmContact.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmCoopLatina.java</file>
+            <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoute.java</file>
         </group>
->>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc
     </open-files>
 </project-private>

@@ -66,7 +66,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         btnReturnToMainMenu = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
@@ -265,14 +265,14 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Añadir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("Lista de rutas");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Lista de rutas");
+        jButton2.setText("Añadir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -283,33 +283,34 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(btnSearch)
-                .addGap(55, 55, 55)
-                .addComponent(btnDelete)
-                .addGap(35, 35, 35))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(btnReturnToMainMenu)
-                .addGap(39, 39, 39)
-                .addComponent(jButton2)
+                .addGap(56, 56, 56)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addGap(60, 60, 60)
+                        .addComponent(btnSearch)
+                        .addGap(47, 47, 47)
+                        .addComponent(btnDelete))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnReturnToMainMenu)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addGap(38, 38, 38)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
                     .addComponent(btnSearch)
-                    .addComponent(btnDelete)
-                    .addComponent(jButton1))
+                    .addComponent(btnDelete))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReturnToMainMenu)
-                    .addComponent(jButton2))
+                    .addComponent(jButton3))
                 .addGap(34, 34, 34))
         );
 
@@ -474,13 +475,14 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
     }//GEN-LAST:event_cmbAvaibleRouteActionPerformed
 
-<<<<<<< HEAD
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        FrmRoute frmRoute;
+        frmRoute = new FrmRoute();
+        frmRoute.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-=======
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        
->>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String nameRoute;
         int idRoute;
         int distanceKm;
@@ -497,14 +499,8 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
         RoutesController routesController = new RoutesController(route,"Routes");
         routesController.create();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        FrmRouteTable frmRouteTable;
-        frmRouteTable = new FrmRouteTable();
-        frmRouteTable.setVisible(true);
-        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+                              
 
     /**
      * @param args the command line arguments
@@ -554,8 +550,8 @@ public class FrmRouteRegister extends javax.swing.JFrame {
     private javax.swing.JButton btnReturnToMainMenu;
     private javax.swing.JButton btnSearch;
     private javax.swing.JComboBox<String> cmbAvaibleRoute;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

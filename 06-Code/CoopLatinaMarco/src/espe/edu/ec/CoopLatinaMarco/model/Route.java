@@ -27,11 +27,6 @@ public class Route extends BasicModel{
         return document;
     }
 
-<<<<<<< HEAD
-=======
- 
-    
->>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc
     public Route(String nameRoute, int idRoute, int distanceKm, float priceOfRoute, boolean avalibleRoute) {
         this.nameRoute = nameRoute;
         this.idRoute = idRoute;
@@ -40,18 +35,11 @@ public class Route extends BasicModel{
         this.avalibleRoute = avalibleRoute;
     }
 
-<<<<<<< HEAD
-=======
-   
-
-   
->>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc
     @Override
     public String toString() {
         return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + ", avalibleRoute=" + avalibleRoute + '}';
     }
 
-<<<<<<< HEAD
  
     /*
 =======

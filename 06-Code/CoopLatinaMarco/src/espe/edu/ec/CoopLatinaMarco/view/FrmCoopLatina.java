@@ -46,7 +46,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         mnuRoutesRegister = new javax.swing.JMenuItem();
-        mnuRoutesTable = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
 
@@ -128,14 +128,14 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         });
         jMenu6.add(mnuRoutesRegister);
 
-        mnuRoutesTable.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mnuRoutesTable.setText("Lista de rutas");
-        mnuRoutesTable.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem8.setText("Lista de rutas");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuRoutesTableActionPerformed(evt);
+                jMenuItem8ActionPerformed(evt);
             }
         });
-        jMenu6.add(mnuRoutesTable);
+        jMenu6.add(jMenuItem8);
 
         jMenuBar1.add(jMenu6);
 
@@ -194,13 +194,6 @@ public class FrmCoopLatina extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void mnuRoutesTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuRoutesTableActionPerformed
-        FrmRouteTable frmRouteTable;
-        frmRouteTable = new FrmRouteTable();
-        frmRouteTable.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_mnuRoutesTableActionPerformed
-
     private void mnuRoutesRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuRoutesRegisterActionPerformed
         FrmRouteRegister frmRouteRegister;
         frmRouteRegister = new FrmRouteRegister();
@@ -231,6 +224,13 @@ public class FrmCoopLatina extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_jMenuItem6ActionPerformed1
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        FrmRoute frmRoute;
+        frmRoute = new FrmRoute();
+        frmRoute.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,7 +282,7 @@ public class FrmCoopLatina extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem mnuRoutesRegister;
-    private javax.swing.JMenuItem mnuRoutesTable;
     // End of variables declaration//GEN-END:variables
 }
