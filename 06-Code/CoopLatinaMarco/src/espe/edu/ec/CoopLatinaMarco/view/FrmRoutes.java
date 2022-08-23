@@ -3,23 +3,17 @@ package espe.edu.ec.CoopLatinaMarco.view;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-<<<<<<< HEAD
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import espe.edu.ec.CoopLatinaMarco.controller.BasicController;
 import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
-=======
 import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 import espe.edu.ec.CoopLatinaMarco.model.Route;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
-=======
 import javax.swing.JFrame;
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 import org.bson.Document;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -38,15 +32,12 @@ public class FrmRoutes extends javax.swing.JFrame {
     public FrmRoutes() {
         
         setTitle("Routes");
-<<<<<<< HEAD
         setIconImage(getIconImage());        
         setDefaultCloseOperation(0);
-=======
         setIconImage(getIconImage()); 
         initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         
     
     }
@@ -56,12 +47,7 @@ public class FrmRoutes extends javax.swing.JFrame {
         return retValue;
     }
     
-    
-<<<<<<< HEAD
-    public void loadRouteTable(){
-=======
     public void loadTicketTable(){
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         Connection connection = new Connection();
         connection.connectionDataBase();
         
@@ -69,13 +55,12 @@ public class FrmRoutes extends javax.swing.JFrame {
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoDatabase db = Connection.mongodb.withCodecRegistry(codecRegistry);
         MongoCollection<Route>collectionRoutes = db.getCollection("Routes", Route.class);
-<<<<<<< HEAD
+
         List<Route> routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
 
-=======
+
         List<Route>routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
     
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
     Object[][] objects = new Object[routes.size()][5];
     
         for (int i = 0; i < routes.size(); i++) {
@@ -240,15 +225,14 @@ public class FrmRoutes extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-<<<<<<< HEAD
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         loadRouteTable();
     }//GEN-LAST:event_jButton3ActionPerformed
-=======
+
     private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
         loadTicketTable();     
     }//GEN-LAST:event_btnLoadActionPerformed
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
+
 
     /**
      * @param args the command line arguments

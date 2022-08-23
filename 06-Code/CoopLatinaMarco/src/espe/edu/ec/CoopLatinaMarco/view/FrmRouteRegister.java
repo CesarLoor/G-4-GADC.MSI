@@ -5,11 +5,7 @@ import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import espe.edu.ec.CoopLatinaMarco.model.Route;
 import java.awt.Image;
 import java.awt.Toolkit;
-<<<<<<< HEAD
-import java.util.ArrayList;
-=======
 import java.util.Set;
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -31,10 +27,6 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblDistanceError.setVisible(false);
         lblPriceError.setVisible(false);
         setDefaultCloseOperation(0);
-<<<<<<< HEAD
-=======
-        
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         Connection connection = new Connection();
         connection.connectionDataBase();
 
@@ -353,9 +345,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         this.setVisible(false);   
     }//GEN-LAST:event_btnReturnToMainMenuActionPerformed
 
-<<<<<<< HEAD
-=======
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {                                       
         
 
         String nameRoute;
@@ -376,29 +366,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         routesController.create();
         
         
-        
-        
-        
-        
-//        Route route;
-//        RoutesController saveRoute;
-//        
-//        route = new Route();
-//        saveRoute = new RoutesController();
-//        
-//        route.setNameRoute(txtNameRoute.getText());
-//        route.setIdRoute(JTValidation(txtIdRoute.getText()));
-//        route.setDistanceKm(JTValidation(txtDistanceKm.getText()));
-//        route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
-//        route.setAvalibleRoute(AvailableRoute(cmbAvaibleRoute.getSelectedItem().toString()));
-//        
-//       saveRoute.CreateRoute(route);
-//       JOptionPane.showMessageDialog(null, "Route added succesfull");
-//       CleanTxtFields();
-       
-    }//GEN-LAST:event_btnAddActionPerformed
 
->>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
+       
+    }                                      
+
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         int i = JOptionPane.showConfirmDialog(this,"¿Esta segur@ de que quiere eliminar esta ruta?");
         if (i == 0){
