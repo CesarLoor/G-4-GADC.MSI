@@ -32,9 +32,7 @@ public class FrmRoutes extends javax.swing.JFrame {
     public FrmRoutes() {
         
         setTitle("Routes");
-        setIconImage(getIconImage());        
-        setDefaultCloseOperation(0);
-        setIconImage(getIconImage()); 
+        setIconImage(getIconImage());  
         initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -58,9 +56,6 @@ public class FrmRoutes extends javax.swing.JFrame {
 
         List<Route> routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
 
-
-        List<Route>routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
-    
     Object[][] objects = new Object[routes.size()][5];
     
         for (int i = 0; i < routes.size(); i++) {
@@ -215,18 +210,18 @@ public class FrmRoutes extends javax.swing.JFrame {
         FrmCoopLatina frmCoopLatina;
         frmCoopLatina = new FrmCoopLatina();
         frmCoopLatina.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         FrmRouteRegister frmRouteRegister;
         frmRouteRegister = new FrmRouteRegister();
         frmRouteRegister.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        loadRouteTable();
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
