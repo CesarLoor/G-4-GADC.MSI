@@ -3,8 +3,6 @@ package espe.edu.ec.CoopLatinaMarco.view;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import static com.mongodb.client.model.Filters.eq;
-import espe.edu.ec.CoopLatinaMarco.controller.BasicController;
 import espe.edu.ec.CoopLatinaMarco.controller.PassengerController;
 import espe.edu.ec.CoopLatinaMarco.model.Passenger;
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
@@ -13,7 +11,6 @@ import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
-import javax.swing.table.DefaultTableModel;
 import org.bson.Document;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -60,15 +57,15 @@ public class FrmPassenger extends javax.swing.JFrame {
         
         Object[][] objects = new Object[passengers.size()][3];
         
-        for (int i = 0; i < passengers.size(); i++) {
-            objects[i][0] = passengers.get(i).getIdentificationCard();
-            objects[i][1] = passengers.get(i).getName();
-            objects[i][2] = passengers.get(i).getEmail();
+            for (int i = 0; i < passengers.size(); i++) {
+                objects[i][0] = passengers.get(i).getIdentificationCard();
+                objects[i][1] = passengers.get(i).getName();
+                objects[i][2] = passengers.get(i).getEmail();
             
-             tblPassenger.setModel(new javax.swing.table.DefaultTableModel(
+                tblPassenger.setModel(new javax.swing.table.DefaultTableModel(
                     objects,
                     new String[]{
-                        "Id", "FullName", "E-mail",
+                        "IdentificationCard", "FullName", "E-mail",
                     }
             ));
         }

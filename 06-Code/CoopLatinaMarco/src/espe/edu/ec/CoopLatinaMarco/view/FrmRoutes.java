@@ -1,9 +1,21 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
+import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import espe.edu.ec.CoopLatinaMarco.model.Route;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JFrame;
+import org.bson.Document;
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
 
 /**
  *
@@ -15,11 +27,12 @@ public class FrmRoutes extends javax.swing.JFrame {
      * Creates new form FrmRouteTable
      */
     public FrmRoutes() {
-        initComponents();
+        
         setTitle("Routes");
-        setIconImage(getIconImage());        
-        populateRoutesTable();
-        setDefaultCloseOperation(0);
+        setIconImage(getIconImage()); 
+        initComponents();
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         
     
     }
@@ -30,35 +43,15 @@ public class FrmRoutes extends javax.swing.JFrame {
     }
     
     
-    public void populateRoutesTable(){
-    ArrayList<Route> routes;
-    routes = new ArrayList<>();
-    Route route;
-    
-    route = new Route("Marianas",90892,982, 83.5F, true);
-    routes.add(route);
-    route = new Route("Carapungo",93782,567, 23.4F, false);
-    routes.add(route); 
-    route = new Route("Moran",98719,324, 41.4F, false);
-    routes.add(route);
-    route = new Route("Marianas",9812,352, 23.2F, true);
-    routes.add(route);
-    route = new Route("CochaPamba",89812,612, 81.54F, true);
-    routes.add(route);
-    route = new Route("Zámbiza",90212,312, 86.12F, false);
-    routes.add(route); 
-    route = new Route("La Carolina",13923,592, 47.7F, true);
-    routes.add(route);
-    route = new Route("El Inca",98231,784, 43.1F, true);
-    routes.add(route);
-    route = new Route("Rumiñahui",90892,135, 03.4F, true);
-    routes.add(route);
-    route = new Route("Comite del pueblo",89271,432, 53.9F, false);
-    routes.add(route); 
-    route = new Route("Llano grande",34122,829, 71.5F, false);
-    routes.add(route);
-    route = new Route("Llano chico",76412,981, 53.1F, false);
-    routes.add(route);
+    public void loadTicketTable(){
+        Connection connection = new Connection();
+        connection.connectionDataBase();
+        
+        CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        MongoDatabase db = Connection.mongodb.withCodecRegistry(codecRegistry);
+        MongoCollection<Route>collectionRoutes = db.getCollection("Routes", Route.class);
+        List<Route>routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
     
     Object[][] objects = new Object[routes.size()][5];
     
@@ -93,6 +86,7 @@ public class FrmRoutes extends javax.swing.JFrame {
         tblRouteTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        btnLoad = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -125,6 +119,13 @@ public class FrmRoutes extends javax.swing.JFrame {
             }
         });
 
+        btnLoad.setText("Cargar");
+        btnLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoadActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -137,6 +138,8 @@ public class FrmRoutes extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton2)
+                .addGap(56, 56, 56)
+                .addComponent(btnLoad)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -151,7 +154,8 @@ public class FrmRoutes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(btnLoad))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -187,6 +191,10 @@ public class FrmRoutes extends javax.swing.JFrame {
         frmRouteRegister.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
+        loadTicketTable();     
+    }//GEN-LAST:event_btnLoadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,6 +235,7 @@ public class FrmRoutes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLoad;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

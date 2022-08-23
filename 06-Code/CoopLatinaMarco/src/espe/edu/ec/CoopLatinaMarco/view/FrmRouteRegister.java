@@ -353,12 +353,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         idRoute = Integer.parseInt(txtIdRoute.getText());
         distanceKm = Integer.parseInt(txtDistanceKm.getText());
         priceOfRoute = Integer.parseInt(txtPriceOfRoute.getText());
-       // AvailableRoute(cmbAvaibleRoute.getActionCommand());
+        AvailableRoute(cmbAvaibleRoute.getActionCommand());
         
         Route route = new Route(nameRoute, idRoute, distanceKm, priceOfRoute, avalibleRoute);
         
         RoutesController routesController = new RoutesController(route,"Routes");
-        routesController.CreateRoute();
+        routesController.create();
         
         
         

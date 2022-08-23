@@ -6,12 +6,26 @@ import org.bson.Document;
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
  */
-public class Route {
+public class Route extends BasicModel{
     private String nameRoute;
     private int idRoute;
     private int distanceKm;
     private float priceOfRoute;
     private boolean avalibleRoute;
+    
+    public Route(){}
+    
+    @Override
+    public Document buildDocument() {
+        Document document = new Document();
+
+        document.append("Distance", this.distanceKm).
+                append("Avalible Route", this.avalibleRoute).
+                append("Id Route", this.idRoute).
+                append("Name Route", this.nameRoute).
+                append("Price Route", this.priceOfRoute);
+        return document;
+    }
 
     public Route(String nameRoute, int idRoute, int distanceKm, float priceOfRoute, boolean avalibleRoute) {
         this.nameRoute = nameRoute;
@@ -21,7 +35,7 @@ public class Route {
         this.avalibleRoute = avalibleRoute;
     }
 
-   public Route(){}
+   
     
     
     @Override
@@ -100,15 +114,6 @@ public class Route {
     public void setAvalibleRoute(boolean avalibleRoute) {
         this.avalibleRoute = avalibleRoute;
     }
-    public Document buildDocument() {
-        Document document = new Document();
-
-        document.append("Distance", this.distanceKm).
-                append("Avalible Route", this.avalibleRoute).
-                append("Id Route", this.idRoute).
-                append("Name Route", this.nameRoute).
-                append("Price Route", this.priceOfRoute);
-        return document;
-    }
+    
 
 }
