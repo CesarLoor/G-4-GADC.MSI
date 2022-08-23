@@ -474,8 +474,13 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         
     }//GEN-LAST:event_cmbAvaibleRouteActionPerformed
 
+<<<<<<< HEAD
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+=======
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        
+>>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc
         String nameRoute;
         int idRoute;
         int distanceKm;
@@ -537,6 +542,7 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FrmRouteRegister().setVisible(true);
             }

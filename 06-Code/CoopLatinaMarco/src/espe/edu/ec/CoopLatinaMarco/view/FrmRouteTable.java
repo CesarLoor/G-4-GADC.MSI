@@ -27,7 +27,11 @@ public class FrmRouteTable extends javax.swing.JFrame {
      */
     public FrmRouteTable() {
         setTitle("Routes");
+<<<<<<< HEAD:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteTable.java
         setIconImage(getIconImage());        
+=======
+        setIconImage(getIconImage());  
+>>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java
         initComponents();
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -48,7 +52,10 @@ public class FrmRouteTable extends javax.swing.JFrame {
 
         List<Route> routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
 
+<<<<<<< HEAD:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteTable.java
     
+=======
+>>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java
     Object[][] objects = new Object[routes.size()][5];
     
         for (int i = 0; i < routes.size(); i++) {
@@ -178,13 +185,19 @@ public class FrmRouteTable extends javax.swing.JFrame {
         FrmCoopLatina frmCoopLatina;
         frmCoopLatina = new FrmCoopLatina();
         frmCoopLatina.setVisible(true);
+<<<<<<< HEAD:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteTable.java
         this.setVisible(false);  
     }//GEN-LAST:event_jButton3ActionPerformed
+=======
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         FrmRouteRegister frmRouteRegister;
         frmRouteRegister = new FrmRouteRegister();
         frmRouteRegister.setVisible(true);
+<<<<<<< HEAD:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteTable.java
         this.setVisible(false);  
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -192,6 +205,20 @@ public class FrmRouteTable extends javax.swing.JFrame {
       loadTicketTable();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+=======
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
+        loadTicketTable();     
+    }//GEN-LAST:event_btnLoadActionPerformed
+
+
+>>>>>>> 21afe5538060e77ebd9ae5d5924ab8be4be323bc:06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java
     /**
      * @param args the command line arguments
      */
