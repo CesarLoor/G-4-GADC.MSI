@@ -2,9 +2,36 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+                                        
+        =======
+        
+        
+        
+        
+        
+        
+        
+        
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRouteRegister.java</file>
             <file>file:/C:/Users/Compus/Desktop/u/POO/ProyecyoPOO/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java</file>
+=======
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/Frmabout.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Connection.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmBus.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/pictures/banner2.png</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmRoutes.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Route.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/BasicModel.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/model/Passenger.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/BasicController.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/PassengerController.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/controller/RoutesController.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/Cursos/repositorios/G-4-GADC.MSI/06-Code/CoopLatinaMarco/src/espe/edu/ec/CoopLatinaMarco/view/FrmPassenger.java</file>
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         </group>
     </open-files>
 </project-private>

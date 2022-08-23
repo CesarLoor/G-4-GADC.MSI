@@ -13,6 +13,7 @@ import org.bson.Document;
 /**
  *
  * @author Loor Cesar,DDCO-ESPE,GADC.MSI
+ * 
  */
 public class BasicController<T extends BasicModel> {
     T model;

@@ -125,49 +125,49 @@ public class FrmTicketRegister extends javax.swing.JFrame {
         jPanel1.add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 113, 30));
 
         btnAdd.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnAdd.setText("Add");
+        btnAdd.setText("Agregar");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 70, 30));
+        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 100, 30));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel1.setText("Route");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 63, -1));
+        jLabel1.setText("Ruta");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 63, -1));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Bus");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 63, 29));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 63, 29));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel4.setText("Adress");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 63, 29));
+        jLabel4.setText("Dirección");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 70, 29));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel5.setText("Price");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 63, 29));
+        jLabel5.setText("Precio");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 63, 29));
 
         jLabel6.setFont(new java.awt.Font("Harlow Solid Italic", 0, 36)); // NOI18N
-        jLabel6.setText("Ticket");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 99, -1));
+        jLabel6.setText("Boleto");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 120, -1));
 
         btnBack.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnBack.setText("Back");
+        btnBack.setText("Volver");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 76, 30));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 90, 30));
         jPanel1.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(359, 218, 54, -1));
         jPanel1.add(lblError1, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 302, 54, -1));
         jPanel1.add(lblError2, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 347, 54, -1));
         jPanel1.add(lblError5, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 365, 54, -1));
 
         btnTableTicket.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnTableTicket.setText("Table");
+        btnTableTicket.setText("Tabla");
         btnTableTicket.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTableTicketActionPerformed(evt);
@@ -201,7 +201,7 @@ public class FrmTicketRegister extends javax.swing.JFrame {
         jPanel1.add(Window, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 30));
 
         btnClean.setFont(new java.awt.Font("Cascadia Code", 0, 18)); // NOI18N
-        btnClean.setText("Clean");
+        btnClean.setText("Limpiar");
         btnClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCleanActionPerformed(evt);

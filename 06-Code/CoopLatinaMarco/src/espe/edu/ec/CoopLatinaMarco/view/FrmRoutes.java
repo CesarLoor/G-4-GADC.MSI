@@ -3,14 +3,23 @@ package espe.edu.ec.CoopLatinaMarco.view;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+<<<<<<< HEAD
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import espe.edu.ec.CoopLatinaMarco.controller.BasicController;
 import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
+=======
+import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
+import espe.edu.ec.CoopLatinaMarco.model.Connection;
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 import espe.edu.ec.CoopLatinaMarco.model.Route;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+import javax.swing.JFrame;
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 import org.bson.Document;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -27,10 +36,17 @@ public class FrmRoutes extends javax.swing.JFrame {
      * Creates new form FrmRouteTable
      */
     public FrmRoutes() {
-        initComponents();
+        
         setTitle("Routes");
+<<<<<<< HEAD
         setIconImage(getIconImage());        
         setDefaultCloseOperation(0);
+=======
+        setIconImage(getIconImage()); 
+        initComponents();
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         
     
     }
@@ -41,7 +57,11 @@ public class FrmRoutes extends javax.swing.JFrame {
     }
     
     
+<<<<<<< HEAD
     public void loadRouteTable(){
+=======
+    public void loadTicketTable(){
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         Connection connection = new Connection();
         connection.connectionDataBase();
         
@@ -49,8 +69,13 @@ public class FrmRoutes extends javax.swing.JFrame {
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoDatabase db = Connection.mongodb.withCodecRegistry(codecRegistry);
         MongoCollection<Route>collectionRoutes = db.getCollection("Routes", Route.class);
+<<<<<<< HEAD
         List<Route> routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
 
+=======
+        List<Route>routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
+    
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
     Object[][] objects = new Object[routes.size()][5];
     
         for (int i = 0; i < routes.size(); i++) {
@@ -84,13 +109,17 @@ public class FrmRoutes extends javax.swing.JFrame {
         tblRouteTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+<<<<<<< HEAD
         jButton3 = new javax.swing.JButton();
+=======
+        btnLoad = new javax.swing.JButton();
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ROUTES");
+        jLabel1.setText("Rutas");
 
         tblRouteTable.setBackground(new java.awt.Color(204, 204, 255));
         tblRouteTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -98,29 +127,44 @@ public class FrmRoutes extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Name Route", "ID Route", "Distance KM", "Price of Route", "Avaible Route"
+                "Nombre de Ruta", "ID Ruta", "Distancia KM", "Precio", "Disponibilidad"
             }
         ));
         jScrollPane1.setViewportView(tblRouteTable);
 
+<<<<<<< HEAD
         jButton1.setText("Volver al menú principal");
+=======
+        jButton1.setText("Retornar Menú");
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         jButton2.setText("Volver al registro de rutas");
+=======
+        jButton2.setText("Retornar Registro de Rutas");
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+<<<<<<< HEAD
         jButton3.setText("Actualizar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+=======
+        btnLoad.setText("Cargar");
+        btnLoad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoadActionPerformed(evt);
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
             }
         });
 
@@ -136,6 +180,8 @@ public class FrmRoutes extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton2)
+                .addGap(56, 56, 56)
+                .addComponent(btnLoad)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(33, 33, 33)
@@ -153,7 +199,11 @@ public class FrmRoutes extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
+<<<<<<< HEAD
                     .addComponent(jButton3))
+=======
+                    .addComponent(btnLoad))
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -190,9 +240,15 @@ public class FrmRoutes extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
+<<<<<<< HEAD
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         loadRouteTable();
     }//GEN-LAST:event_jButton3ActionPerformed
+=======
+    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
+        loadTicketTable();     
+    }//GEN-LAST:event_btnLoadActionPerformed
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 
     /**
      * @param args the command line arguments
@@ -233,6 +289,7 @@ public class FrmRoutes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLoad;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

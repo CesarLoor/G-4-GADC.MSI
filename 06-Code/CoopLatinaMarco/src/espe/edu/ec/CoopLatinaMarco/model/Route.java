@@ -12,6 +12,20 @@ public class Route extends BasicModel{
     private int distanceKm;
     private float priceOfRoute;
     private boolean avalibleRoute;
+    
+    public Route(){}
+    
+    @Override
+    public Document buildDocument() {
+        Document document = new Document();
+
+        document.append("Distance", this.distanceKm).
+                append("Avalible Route", this.avalibleRoute).
+                append("Id Route", this.idRoute).
+                append("Name Route", this.nameRoute).
+                append("Price Route", this.priceOfRoute);
+        return document;
+    }
 
     public Route(){}
     @Override
@@ -34,11 +48,22 @@ public class Route extends BasicModel{
         this.avalibleRoute = avalibleRoute;
     }
 
+<<<<<<< HEAD
 
+=======
+   
+    
+    
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
     @Override
     public String toString() {
         return "Routes{" + "nameRoute=" + nameRoute + ", idRoute=" + idRoute + ", distanceKm=" + distanceKm + ", priceOfRoute=" + priceOfRoute + ", avalibleRoute=" + avalibleRoute + '}';
     }
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
     
     /**
      * @return the nameRoute
@@ -109,5 +134,9 @@ public class Route extends BasicModel{
     public void setAvalibleRoute(boolean avalibleRoute) {
         this.avalibleRoute = avalibleRoute;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 
 }

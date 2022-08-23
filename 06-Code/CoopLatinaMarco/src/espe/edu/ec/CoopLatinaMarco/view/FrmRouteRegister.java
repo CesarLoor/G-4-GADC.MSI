@@ -3,10 +3,13 @@ package espe.edu.ec.CoopLatinaMarco.view;
 import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
 import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import espe.edu.ec.CoopLatinaMarco.model.Route;
-import espe.edu.ec.CoopLatinaMarco.view.FrmCoopLatina;
 import java.awt.Image;
 import java.awt.Toolkit;
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+import java.util.Set;
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -28,6 +31,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblDistanceError.setVisible(false);
         lblPriceError.setVisible(false);
         setDefaultCloseOperation(0);
+<<<<<<< HEAD
+=======
+        
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
         Connection connection = new Connection();
         connection.connectionDataBase();
 
@@ -346,6 +353,52 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         this.setVisible(false);   
     }//GEN-LAST:event_btnReturnToMainMenuActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        
+
+        String nameRoute;
+        int idRoute;
+        int distanceKm;
+        int priceOfRoute;
+        boolean avalibleRoute = true;
+        
+        nameRoute = txtNameRoute.getText();
+        idRoute = Integer.parseInt(txtIdRoute.getText());
+        distanceKm = Integer.parseInt(txtDistanceKm.getText());
+        priceOfRoute = Integer.parseInt(txtPriceOfRoute.getText());
+        AvailableRoute(cmbAvaibleRoute.getActionCommand());
+        
+        Route route = new Route(nameRoute, idRoute, distanceKm, priceOfRoute, avalibleRoute);
+        
+        RoutesController routesController = new RoutesController(route,"Routes");
+        routesController.create();
+        
+        
+        
+        
+        
+        
+//        Route route;
+//        RoutesController saveRoute;
+//        
+//        route = new Route();
+//        saveRoute = new RoutesController();
+//        
+//        route.setNameRoute(txtNameRoute.getText());
+//        route.setIdRoute(JTValidation(txtIdRoute.getText()));
+//        route.setDistanceKm(JTValidation(txtDistanceKm.getText()));
+//        route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
+//        route.setAvalibleRoute(AvailableRoute(cmbAvaibleRoute.getSelectedItem().toString()));
+//        
+//       saveRoute.CreateRoute(route);
+//       JOptionPane.showMessageDialog(null, "Route added succesfull");
+//       CleanTxtFields();
+       
+    }//GEN-LAST:event_btnAddActionPerformed
+
+>>>>>>> e04ef2aa0f88b76115d1acd6925bb7dcd229fbb5
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         int i = JOptionPane.showConfirmDialog(this,"¿Esta segur@ de que quiere eliminar esta ruta?");
         if (i == 0){
@@ -412,8 +465,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         String name = String.valueOf(evt.getKeyChar());
         if(!name.matches("[0-9]")){
             evt.consume();
+            txtNameRoute.setEditable(true);
             lblNameError.setVisible(false);
+            
+            
         }else{
+            txtNameRoute.setEditable(true);
             lblNameError.setVisible(true);
         }
     }//GEN-LAST:event_txtNameRouteKeyPressed
