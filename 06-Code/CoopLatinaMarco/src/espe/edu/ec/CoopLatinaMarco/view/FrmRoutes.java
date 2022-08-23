@@ -1,9 +1,21 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import espe.edu.ec.CoopLatinaMarco.model.Connection;
+import espe.edu.ec.CoopLatinaMarco.controller.BasicController;
+import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
 import espe.edu.ec.CoopLatinaMarco.model.Route;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.List;
+import org.bson.Document;
+import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
+import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
 
 /**
  *
@@ -18,7 +30,6 @@ public class FrmRoutes extends javax.swing.JFrame {
         initComponents();
         setTitle("Routes");
         setIconImage(getIconImage());        
-        populateRoutesTable();
         setDefaultCloseOperation(0);
         
     
@@ -30,36 +41,16 @@ public class FrmRoutes extends javax.swing.JFrame {
     }
     
     
-    public void populateRoutesTable(){
-    ArrayList<Route> routes;
-    routes = new ArrayList<>();
-    Route route;
-    
-    route = new Route("Marianas",90892,982, 83.5F, true);
-    routes.add(route);
-    route = new Route("Carapungo",93782,567, 23.4F, false);
-    routes.add(route); 
-    route = new Route("Moran",98719,324, 41.4F, false);
-    routes.add(route);
-    route = new Route("Marianas",9812,352, 23.2F, true);
-    routes.add(route);
-    route = new Route("CochaPamba",89812,612, 81.54F, true);
-    routes.add(route);
-    route = new Route("Zámbiza",90212,312, 86.12F, false);
-    routes.add(route); 
-    route = new Route("La Carolina",13923,592, 47.7F, true);
-    routes.add(route);
-    route = new Route("El Inca",98231,784, 43.1F, true);
-    routes.add(route);
-    route = new Route("Rumiñahui",90892,135, 03.4F, true);
-    routes.add(route);
-    route = new Route("Comite del pueblo",89271,432, 53.9F, false);
-    routes.add(route); 
-    route = new Route("Llano grande",34122,829, 71.5F, false);
-    routes.add(route);
-    route = new Route("Llano chico",76412,981, 53.1F, false);
-    routes.add(route);
-    
+    public void loadRouteTable(){
+        Connection connection = new Connection();
+        connection.connectionDataBase();
+        
+        CodecRegistry codecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        MongoDatabase db = Connection.mongodb.withCodecRegistry(codecRegistry);
+        MongoCollection<Route>collectionRoutes = db.getCollection("Routes", Route.class);
+        List<Route> routes = collectionRoutes.find(new Document(), Route.class).into(new ArrayList<Route>());
+
     Object[][] objects = new Object[routes.size()][5];
     
         for (int i = 0; i < routes.size(); i++) {
@@ -93,6 +84,7 @@ public class FrmRoutes extends javax.swing.JFrame {
         tblRouteTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -111,17 +103,24 @@ public class FrmRoutes extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblRouteTable);
 
-        jButton1.setText("Return to main menu");
+        jButton1.setText("Volver al menú principal");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Return to route register");
+        jButton2.setText("Volver al registro de rutas");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Actualizar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -138,6 +137,8 @@ public class FrmRoutes extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(33, 33, 33)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -151,7 +152,8 @@ public class FrmRoutes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -187,6 +189,10 @@ public class FrmRoutes extends javax.swing.JFrame {
         frmRouteRegister.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        loadRouteTable();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,6 +235,7 @@ public class FrmRoutes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;

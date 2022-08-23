@@ -1,11 +1,14 @@
 package espe.edu.ec.CoopLatinaMarco.view;
 
 import espe.edu.ec.CoopLatinaMarco.controller.RoutesController;
+import espe.edu.ec.CoopLatinaMarco.model.Connection;
 import espe.edu.ec.CoopLatinaMarco.model.Route;
 import espe.edu.ec.CoopLatinaMarco.view.FrmCoopLatina;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -25,6 +28,8 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblDistanceError.setVisible(false);
         lblPriceError.setVisible(false);
         setDefaultCloseOperation(0);
+        Connection connection = new Connection();
+        connection.connectionDataBase();
 
     }
     @Override
@@ -59,10 +64,10 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblPriceError = new javax.swing.JLabel();
         cmbAvaibleRoute = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
-        btnAdd = new javax.swing.JButton();
         btnReturnToMainMenu = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -162,6 +167,11 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         lblPriceError.setText("Sólo digitos");
 
         cmbAvaibleRoute.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "No disponible" }));
+        cmbAvaibleRoute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbAvaibleRouteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -234,13 +244,6 @@ public class FrmRouteRegister extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
-        btnAdd.setText("Añadir");
-        btnAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddActionPerformed(evt);
-            }
-        });
-
         btnReturnToMainMenu.setText("Volver al menú principal");
         btnReturnToMainMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,16 +265,23 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             }
         });
 
+        btnAdd.setText("Añadir");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(81, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(btnAdd)
-                        .addGap(54, 54, 54)
+                        .addGap(50, 50, 50)
                         .addComponent(btnSearch)
                         .addGap(55, 55, 55)
                         .addComponent(btnDelete)
@@ -285,9 +295,9 @@ public class FrmRouteRegister extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdd)
                     .addComponent(btnSearch)
-                    .addComponent(btnDelete))
+                    .addComponent(btnDelete)
+                    .addComponent(btnAdd))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnReturnToMainMenu)
                 .addGap(34, 34, 34))
@@ -336,27 +346,13 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         this.setVisible(false);   
     }//GEN-LAST:event_btnReturnToMainMenuActionPerformed
 
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        Route route;
-        RoutesController saveRoute;
-        
-        route = new Route();
-        saveRoute = new RoutesController();
-        
-        route.setNameRoute(txtNameRoute.getText());
-        route.setIdRoute(JTValidation(txtIdRoute.getText()));
-        route.setDistanceKm(JTValidation(txtDistanceKm.getText()));
-        route.setPriceOfRoute(JTValidation(txtPriceOfRoute.getText()));
-        route.setAvalibleRoute(AvailableRoute(cmbAvaibleRoute.getSelectedItem().toString()));
-        
-       saveRoute.CreateRoute(route);
-       JOptionPane.showMessageDialog(null, "Route added succesfull");
-       CleanTxtFields();
-       
-    }//GEN-LAST:event_btnAddActionPerformed
-
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        JOptionPane.showMessageDialog(null, "The route has been deleted");
+        int i = JOptionPane.showConfirmDialog(this,"¿Esta segur@ de que quiere eliminar esta ruta?");
+        if (i == 0){
+            JOptionPane.showMessageDialog(this,"La ruta ha sido eliminada exitosamente");
+        } else if (i == 1){
+            JOptionPane.showMessageDialog(this,"La ruta no fue removida");
+        }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void lblIdErrorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblIdErrorKeyPressed
@@ -435,6 +431,29 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "The route has been updated");
     }//GEN-LAST:event_btnSearchActionPerformed
 
+    private void cmbAvaibleRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbAvaibleRouteActionPerformed
+        
+    }//GEN-LAST:event_cmbAvaibleRouteActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        String nameRoute;
+        int idRoute;
+        int distanceKm;
+        int priceOfRoute;
+        boolean avalibleRoute=true;
+        
+        nameRoute = txtNameRoute.getText();
+        idRoute = Integer.parseInt(txtIdRoute.getText());
+        distanceKm = Integer.parseInt(txtDistanceKm.getText());
+        priceOfRoute = Integer.parseInt(txtPriceOfRoute.getText());
+        AvailableRoute(cmbAvaibleRoute.getActionCommand());
+        
+        Route route = new Route(nameRoute, idRoute, distanceKm, priceOfRoute, avalibleRoute);
+        
+        RoutesController routesController = new RoutesController(route,"Routes");
+        routesController.create();
+    }//GEN-LAST:event_btnAddActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -460,6 +479,12 @@ public class FrmRouteRegister extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FrmRouteRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
